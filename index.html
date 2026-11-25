@@ -330,6 +330,14 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
   <div class="wrap">
     <div class="titulo"><h2 class="serif">Anillos para <em>la pareja</em></h2><p class="sub">Más sets para elegir, todos de a dos. Tocá la foto para ver otra vista.</p></div>
     <div class="carrusel" id="carrusel"></div>
+    <p class="nota">Las estrellas y las ventas son las que muestra cada publicación en Mercado Libre. Los precios se renuevan una vez por semana: confirmalos en la publicación antes de pagar. ¿Preferís una pulsera? <a href="#pulseras">Mirá las pulseras para la pareja</a>.</p>
+  </div>
+</section>
+
+<section class="seccion catalogo" id="pulseras">
+  <div class="wrap">
+    <div class="titulo"><h2 class="serif">Pulseras para <em>la pareja</em></h2><p class="sub">Otra forma de decir lo mismo, para llevar en la muñeca. Tocá la foto para ver otra vista.</p></div>
+    <div class="carrusel" id="carrusel2"></div>
     <p class="nota">Las estrellas y las ventas son las que muestra cada publicación en Mercado Libre. Los precios se renuevan una vez por semana: confirmalos en la publicación antes de pagar.</p>
   </div>
 </section>
@@ -394,9 +402,9 @@ var CATALOGO=[
  {id:'endless',nombre:'Endless love, regulables',txt:'Uno con corazón calado y la frase endless love, el otro con un corazón de piedra.',fotos:['img/endless-1.jpg','img/endless-2.jpg'],estr:'4,1',op:'148 opiniones',vend:'+500 vendidos',precio:15189,link:'https://meli.la/2YTytyA'}
 ];
 function cat$(n){return '$ '+fmt(n)}
-function pintarCatalogo(precios){
-  var box=document.getElementById('carrusel');box.innerHTML='';
-  CATALOGO.forEach(function(p){
+function pintarLista(boxId,lista,precios){
+  var box=document.getElementById(boxId);box.innerHTML='';
+  lista.forEach(function(p){
     var pr=(precios&&precios[p.id]&&precios[p.id].precio)?precios[p.id].precio:p.precio;
     var a=document.createElement('article');a.className='tarj';
     var imgs=p.fotos.map(function(f,i){return '<img src="'+f+'" alt="'+p.nombre+(i?' (otra vista)':'')+'" loading="lazy">'}).join('');
@@ -410,6 +418,13 @@ function pintarCatalogo(precios){
     box.appendChild(a);
   });
 }
+/* pulseras para la pareja */
+var PULSERAS=[
+ {id:'nudo',nombre:'Nudo infinito, plateadas',txt:'Una pulsera fina con un nudo para cada uno. Se ajustan a la muñeca y combinan con todo.',fotos:['img/nudo-1.jpg','img/nudo-2.jpg'],estr:'4,8',op:'293 opiniones',vend:'+1000 vendidos',precio:21120,link:'https://meli.la/2NjCSdP'},
+ {id:'iman',nombre:'Corazón con imán, con estuche',txt:'Cada pulsera lleva una mitad del corazón: al juntarlas, el imán las une. Vienen en estuche para regalar.',fotos:['img/iman-1.jpg','img/iman-2.jpg'],estr:'4,3',op:'78 opiniones',vend:'+100 vendidos',precio:22969,link:'https://meli.la/1oixjK2'},
+ {id:'grabado',nombre:'Con fecha o nombre grabado',txt:'Dos pulseras de acero quirúrgico con chapa grabada. Después de comprar, le avisás al vendedor qué querés grabar.',fotos:['img/grabado-1.jpg'],estr:'4,7',op:'152 opiniones',vend:'+500 vendidos',precio:34999,link:'https://meli.la/1roPgTx'}
+];
+function pintarCatalogo(precios){pintarLista('carrusel',CATALOGO,precios);pintarLista('carrusel2',PULSERAS,precios)}
 pintarCatalogo(null);
 fetch('precio.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(p){ponerPrecio(p);pintarCatalogo(p.productos)}).catch(function(){});
 

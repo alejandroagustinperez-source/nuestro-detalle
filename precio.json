@@ -22,6 +22,15 @@
     "endless": {
       "precio": 15189,
       "consultar": true
+    },
+    "nudo": {
+      "precio": 21120
+    },
+    "iman": {
+      "precio": 22969
+    },
+    "grabado": {
+      "precio": 34999
     }
   }
 }

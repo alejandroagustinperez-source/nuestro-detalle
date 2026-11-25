@@ -7,6 +7,9 @@ const PRINCIPAL = 'https://www.mercadolibre.com.ar/p/MLAU1250550473';
 const PRODUCTOS = {
   estuche: 'https://www.mercadolibre.com.ar/set-vip-2-anillos-corazon-promesa-pareja-novios-estuche-pana/up/MLAU3738948337',
   iloveyou: 'https://articulo.mercadolibre.com.ar/MLA-1599033961-2-alianzas-vip-corazon-i-love-you-real-pareja-novios-anillos-_JM',
+  nudo: 'https://www.mercadolibre.com.ar/set-2-pulseras-de-pareja-nudo-amor-infinito-amigo/up/MLAU3739869119',
+  iman: 'https://articulo.mercadolibre.com.ar/MLA-1607544118-pulsera-corazon-iman-pareja-titanio-con-estuche-regalo-_JM',
+  grabado: 'https://www.mercadolibre.com.ar/pulseras-para-parejas-grabado-personalizado-acero-quirurgico/up/MLAU209265944',
   modernos: 'https://www.mercadolibre.com.ar/anillo-alianzas-promesa-hombre-y-mujer-ajustables-modernos/up/MLAU2776669763',
   elegantes: 'https://www.mercadolibre.com.ar/2-anillos-de-pareja-elegantes-compromiso-zirconia-blancos/up/MLAU232055351',
   endless: 'https://www.mercadolibre.com.ar/anillos-pareja-novios-corazon-endless-love-x2-regulables/up/MLAU227197871',
