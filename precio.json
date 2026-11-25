@@ -1,22 +1,27 @@
 {
- "precio": 14416.55,
- "actualizado": "2026-11-25",
- "consultar": false,
- "productos": {
-  "estuche": {
-   "precio": 31344.3
-  },
-  "iloveyou": {
-   "precio": 18420
-  },
-  "modernos": {
-   "precio": 13437
-  },
-  "elegantes": {
-   "precio": 13415
-  },
-  "endless": {
-   "precio": 15189
+  "precio": 14416.55,
+  "actualizado": "2026-11-25",
+  "consultar": true,
+  "productos": {
+    "estuche": {
+      "precio": 31344.3,
+      "consultar": true
+    },
+    "iloveyou": {
+      "precio": 18420,
+      "consultar": true
+    },
+    "modernos": {
+      "precio": 13437,
+      "consultar": true
+    },
+    "elegantes": {
+      "precio": 13415,
+      "consultar": true
+    },
+    "endless": {
+      "precio": 15189,
+      "consultar": true
+    }
   }
- }
 }
