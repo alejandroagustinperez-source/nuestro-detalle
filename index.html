@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nuestro detalle · Anillos de promesa para parejas</title>
-<meta name="description" content="Set de dos anillos de promesa para parejas: uno con flor de cerezo, otro con rama. Ajustables, hechos a mano. Comprá en Mercado Libre.">
+<title>Nuestro detalle · Regalos para la pareja</title>
+<meta name="description" content="Regalos para parejas enamoradas: anillos, pulseras, collares, tazas, llaveros, relojes y más. Elegí, mirá el detalle y comprá en Mercado Libre.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -256,6 +256,86 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
   .info{padding:0 6vw 0 0}
 }
 @media(max-width:520px){.datos b{font-size:25px;white-space:nowrap}.datos span{font-size:12.5px}.cta.grande{font-size:17px;padding:19px 20px}.regalar .oc small{display:none}}
+
+/* ---------- REDISEÑO INICIO ---------- */
+.navlinks{display:none}
+.ghost{display:inline-flex;align-items:center;justify-content:center;background:none;border:1.5px solid var(--tinta);color:var(--tinta);font:600 17px 'Hanken Grotesk',sans-serif;padding:16.5px 30px;border-radius:999px;cursor:pointer;transition:background .25s,color .25s}
+.ghost:hover{background:var(--tinta);color:var(--perla)}
+.p2 .cta{border:0;cursor:pointer;font-family:inherit}
+.p2{max-width:1240px;margin:0 auto;padding:6vh 6vw 8vh;display:grid;grid-template-columns:1.05fr 1fr;gap:4vw;align-items:center;min-height:calc(100vh - 60px)}
+.p2 h1{font-size:clamp(58px,7.2vw,112px);line-height:.95;font-weight:300}
+.p2 h1 i{font-style:italic;color:var(--flor)}
+.p2-sub{color:var(--suave);font-size:19px;max-width:30em;margin-top:26px}
+.p2-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.p2-datos{list-style:none;display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:44px;padding-top:24px;border-top:1px solid var(--plata)}
+.p2-datos li{font-size:14px;color:var(--suave);line-height:1.3}
+.p2-datos b{display:block;font:500 34px/1 'Cormorant Garamond',serif;color:var(--tinta);margin-bottom:4px}
+.p2-txt>*{animation:p2in 1s cubic-bezier(.2,.7,.2,1) both}
+.p2-txt>:nth-child(2){animation-delay:.12s}.p2-txt>:nth-child(3){animation-delay:.24s}.p2-txt>:nth-child(4){animation-delay:.36s}
+@keyframes p2in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.p2-arcos{position:relative;height:min(74vh,640px);min-height:440px}
+.arco{position:absolute;overflow:hidden;border-radius:999px 999px 28px 28px;background:#eadfdf;box-shadow:0 30px 60px -34px rgba(43,24,34,.5);animation:flota 9s ease-in-out infinite,arcoin 1.4s cubic-bezier(.2,.7,.2,1) both}
+.arco img{width:100%;height:100%;object-fit:cover}
+.arco.a1{left:0;top:6%;width:56%;height:66%;transform:translateY(calc(var(--py,0)*-.5px))}
+.arco.a2{right:0;top:0;width:40%;height:50%;animation-delay:-3s,.15s;transform:translateY(calc(var(--py,0)*-1px))}
+.arco.a3{right:6%;bottom:2%;width:42%;height:44%;animation-delay:-6s,.3s;transform:translateY(calc(var(--py,0)*-.25px))}
+@keyframes flota{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@keyframes arcoin{from{opacity:0;clip-path:inset(18% 0 0 0 round 999px 999px 28px 28px)}to{opacity:1;clip-path:inset(0 round 999px 999px 28px 28px)}}
+.sec{max-width:1180px;margin:0 auto;padding:9vh 6vw 0}
+.sec-cab{margin-bottom:34px}
+.sec-cab h2{font-size:clamp(40px,5.4vw,70px);font-weight:300}
+.sec-cab h2 i{font-style:italic;color:var(--flor)}
+.sec-sub{color:var(--suave);font-size:18px;margin-top:12px}
+.cats2{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat2{position:relative;display:block;overflow:hidden;border-radius:24px;aspect-ratio:4/5;background:#eadfdf;text-decoration:none;color:#fff}
+.cat2:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.cat2 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.cat2:hover img{transform:scale(1.06)}
+.cat2:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(43,24,34,.78))}
+.cat2 div{position:absolute;left:20px;right:20px;bottom:18px;z-index:1;display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+.cat2 h3{font:400 clamp(26px,2.6vw,36px)/1 'Cormorant Garamond',serif}
+.cat2:first-child h3{font-size:clamp(38px,4vw,56px)}
+.cat2 span{font-size:13.5px;opacity:.9;white-space:nowrap;padding-bottom:3px}
+.sec-reg{scroll-margin-top:70px}
+.filtros{display:grid;gap:14px;margin-bottom:30px}
+.filtros .fila{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}
+.filtros .fila::-webkit-scrollbar{display:none}
+.pill{flex:none;border:1.2px solid var(--plata);background:#fff;color:var(--tinta);font:500 15px 'Hanken Grotesk',sans-serif;padding:10px 18px;border-radius:999px;cursor:pointer;transition:.2s;white-space:nowrap}
+.pill:hover{border-color:var(--flor)}
+.pill[aria-pressed=true]{background:var(--tinta);border-color:var(--tinta);color:var(--perla)}
+#fCat .pill{background:transparent}#fCat .pill[aria-pressed=true]{background:var(--flor);border-color:var(--flor);color:#fff}
+.fin{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:15px;color:var(--suave)}
+.ord select{font:500 15px 'Hanken Grotesk',sans-serif;color:var(--tinta);background:#fff;border:1.2px solid var(--plata);border-radius:999px;padding:8px 14px;margin-left:6px}
+.todos{padding:0;max-width:none}
+.todos .tarj{animation:aparece .5s cubic-bezier(.2,.7,.2,1) both;transition:transform .35s,box-shadow .35s}
+.todos .tarj:hover{transform:translateY(-4px);box-shadow:0 26px 40px -30px rgba(43,24,34,.5)}
+@keyframes aparece{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.tarj .ph .tipo{position:absolute;left:10px;top:10px;z-index:2;background:rgba(248,242,241,.94);font-size:12.5px;font-weight:600;padding:5px 11px;border-radius:999px;color:var(--suave)}
+.vacio{grid-column:1/-1;text-align:center;padding:50px 10px;color:var(--suave)}
+.vacio button{margin-top:16px}
+.pasos{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:n}
+.pasos li{border-top:1px solid var(--plata);padding-top:22px}
+.pasos b{display:block;font-size:64px;font-weight:300;font-style:italic;color:var(--flor);line-height:1}
+.pasos h3{font:500 28px/1.1 'Cormorant Garamond',serif;margin:12px 0 8px}
+.pasos p{color:var(--suave);font-size:16px;max-width:26em}
+footer{margin-top:10vh;border-top:1px solid var(--plata)}
+@media(min-width:1100px){
+  .navlinks{display:flex;gap:4px;margin-left:auto;margin-right:8px}
+  .navlinks a{font-size:14.5px;text-decoration:none;color:var(--suave);padding:8px 11px;border-radius:999px;transition:.2s;white-space:nowrap}
+  .navlinks a:hover{color:var(--tinta);background:var(--rubor)}
+  .navlinks a.on{color:var(--flor);font-weight:600}
+  .burger{display:none}
+}
+@media(max-width:900px){
+  .p2{grid-template-columns:1fr;min-height:0;padding-top:4vh;gap:34px}
+  .p2-arcos{height:min(84vw,340px);min-height:0}
+  .cats2{grid-template-columns:1fr 1fr;gap:12px}
+  .cat2:first-child{aspect-ratio:2/1.1}
+  .cat2 div{left:14px;right:14px;bottom:12px;flex-direction:column;align-items:flex-start;gap:2px}
+  .pasos{grid-template-columns:1fr;gap:22px}
+  .p2 h1{font-size:clamp(54px,15vw,90px)}
+}
+@media(max-width:520px){.cat2:first-child h3{font-size:36px}.p2-datos b{font-size:30px}}
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   .encuentro{height:auto}.pin{position:static;height:auto;padding:10vh 0}.escena{height:60vh}
@@ -266,6 +346,7 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 
 <header class="top">
   <a class="marca" href="#/">Nuestro detalle</a>
+  <nav class="navlinks" id="navlinks" aria-label="Categorías"></nav>
   <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
 </header>
 <nav class="drawer" id="drawer" aria-label="Categorías">
@@ -283,11 +364,43 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 
 <main>
 <div class="vista" id="v-inicio" hidden>
-  <div class="portada">
-    <h1 class="serif"><span>Un detalle</span><span>para los dos.</span></h1>
-    <p>Regalos para la pareja, de a dos. Elegí qué buscás, mirá el detalle y comprás directo en Mercado Libre.</p>
-  </div>
-  <div class="cats" id="cats"></div>
+  <section class="p2">
+    <div class="p2-txt">
+      <h1 class="serif">Un detalle<br><i>para los dos.</i></h1>
+      <p class="p2-sub">Anillos, pulseras, collares y más regalos para quien te hace feliz. Elegís, mirás el detalle y comprás directo en Mercado Libre.</p>
+      <div class="p2-cta"><button class="cta" type="button" data-ir="regalos">Elegir un regalo</button><button class="ghost" type="button" data-ir="como">Cómo funciona</button></div>
+      <ul class="p2-datos" id="p2datos"></ul>
+    </div>
+    <div class="p2-arcos" id="arcos" aria-hidden="true">
+      <div class="arco a1"><img src="img/hero.jpg" alt=""></div>
+      <div class="arco a2"><img src="img/nudo-3.jpg" alt=""></div>
+      <div class="arco a3"><img src="img/llavero-grabado-3.jpg" alt=""></div>
+    </div>
+  </section>
+
+  <section class="sec" id="categorias">
+    <div class="sec-cab"><h2 class="serif">Elegí por <i>categoría</i></h2></div>
+    <div class="cats2" id="cats"></div>
+  </section>
+
+  <section class="sec sec-reg" id="regalos">
+    <div class="sec-cab"><h2 class="serif">Encontrá <i>tu regalo</i></h2><p class="sec-sub">Filtrá por presupuesto o por tipo de regalo.</p></div>
+    <div class="filtros" id="filtros">
+      <div class="fila" role="group" aria-label="Presupuesto" id="fPres"></div>
+      <div class="fila" role="group" aria-label="Categoría" id="fCat"></div>
+      <div class="fin"><span id="fCuenta" aria-live="polite"></span><label class="ord">Ordenar <select id="fOrden"><option value="rel">Sugeridos</option><option value="menor">Menor precio</option><option value="mayor">Mayor precio</option></select></label></div>
+    </div>
+    <div class="grilla todos" id="todos"></div>
+  </section>
+
+  <section class="sec" id="como">
+    <div class="sec-cab"><h2 class="serif">Cómo <i>funciona</i></h2></div>
+    <ol class="pasos">
+      <li><b class="serif">1</b><h3>Elegís</h3><p>Mirá las categorías o filtrá por presupuesto hasta dar con el regalo.</p></li>
+      <li><b class="serif">2</b><h3>Mirás el detalle</h3><p>Fotos, qué incluye, opiniones y ventas de la publicación original.</p></li>
+      <li><b class="serif">3</b><h3>Comprás en Mercado Libre</h3><p>Pagás y recibís dentro de Mercado Libre, con su compra protegida.</p></li>
+    </ol>
+  </section>
 </div>
 
 <div class="vista" id="v-lista" hidden>
@@ -521,11 +634,45 @@ function precioDe(p){if(p.id==='flor')return FLOR_PRECIO;return(PRECIOS&&PRECIOS
 function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
 function buscar(c,id){var l=CATS[c];if(!l)return null;for(var i=0;i<l.items.length;i++)if(l.items[i].id===id)return l.items[i];return null}
 
-function pintarInicio(){
-  Object.keys(CATS).forEach(function(k){var el=document.querySelector('[data-n="'+k+'"]');if(el)el.textContent=CATS[k].items.length+' '+CATS[k].unidad});
-  document.getElementById('cats').innerHTML=Object.keys(CATS).map(function(k){var c=CATS[k];
-    return '<a class="cat" href="#/'+k+'"><img src="'+c.foto+'" alt="" loading="lazy"><div class="rot"><h2>'+c.nombre+'</h2><span>'+c.items.length+' '+c.unidad+' para elegir</span></div></a>'}).join('');
+var PRES=[['todos','Todos',0,1e12],['a','Hasta $15.000',0,15000],['b','De $15.000 a $35.000',15000,35000],['c','Más de $35.000',35000,1e12]];
+var fil={pres:'todos',cat:'todas',orden:'rel'};
+function listaTodos(){var r=[];Object.keys(CATS).forEach(function(k){CATS[k].items.forEach(function(p){r.push({k:k,p:p})})});return r}
+function tarjeta(k,p,i){
+  return '<a class="tarj" style="animation-delay:'+Math.min(i,12)*35+'ms" href="#/'+k+'/'+p.id+'"><div class="ph" role="img" aria-label="'+esc(p.nombre)+'"><span class="tipo">'+CATS[k].nombre+'</span><img src="'+p.fotos[0]+'" alt="'+esc(p.nombre)+'" loading="lazy"></div>'+
+   '<div class="cuerpo"><h3>'+esc(p.nombre)+'</h3><p>'+esc(p.txt)+'</p>'+
+   '<div class="est">'+(p.estr?'<span class="st" aria-hidden="true">★</span> <b>'+p.estr+'</b> · '+p.op+' · ':'')+p.vend+'</div>'+
+   '<div class="pie"><div class="pr">'+cat$(precioDe(p))+'</div><span class="cta btn">Ver detalle</span></div></div></a>';
 }
+function pintarTodos(){
+  var b=PRES.filter(function(x){return x[0]===fil.pres})[0];
+  var r=listaTodos().filter(function(x){var pr=precioDe(x.p);return pr>b[2]&&pr<=b[3]||(b[2]===0&&pr<=b[3])}).filter(function(x){return fil.cat==='todas'||x.k===fil.cat});
+  if(fil.orden==='menor')r.sort(function(a,c){return precioDe(a.p)-precioDe(c.p)});
+  if(fil.orden==='mayor')r.sort(function(a,c){return precioDe(c.p)-precioDe(a.p)});
+  document.getElementById('fCuenta').textContent=r.length+(r.length===1?' regalo':' regalos');
+  document.getElementById('todos').innerHTML=r.length?r.map(function(x,i){return tarjeta(x.k,x.p,i)}).join(''):'<div class="vacio"><p>No hay regalos con ese presupuesto en esta categoría.</p><button class="ghost" type="button" id="fLimpiar">Ver todos los regalos</button></div>';
+  document.querySelectorAll('#fPres .pill').forEach(function(p){p.setAttribute('aria-pressed',p.dataset.v===fil.pres)});
+  document.querySelectorAll('#fCat .pill').forEach(function(p){p.setAttribute('aria-pressed',p.dataset.v===fil.cat)});
+}
+function pintarInicio(){
+  var ks=Object.keys(CATS),total=listaTodos().length;
+  ks.forEach(function(k){var el=document.querySelector('#drawer [data-n="'+k+'"]');if(el)el.textContent=CATS[k].items.length+' '+CATS[k].unidad});
+  document.getElementById('navlinks').innerHTML=ks.map(function(k){return '<a href="#/'+k+'" data-r="'+k+'">'+CATS[k].nombre+'</a>'}).join('');
+  document.getElementById('p2datos').innerHTML='<li><b>'+total+'</b>regalos elegidos</li><li><b>'+ks.length+'</b>categorías</li><li><b>ML</b>pagás y recibís en Mercado Libre</li>';
+  document.getElementById('cats').innerHTML=ks.map(function(k){var c=CATS[k];
+    return '<a class="cat2" href="#/'+k+'"><img src="'+c.foto+'" alt="" loading="lazy"><div><h3>'+c.nombre+'</h3><span>'+c.items.length+' '+c.unidad+'</span></div></a>'}).join('');
+  document.getElementById('fPres').innerHTML=PRES.map(function(x){return '<button type="button" class="pill" data-v="'+x[0]+'" aria-pressed="false">'+x[1]+'</button>'}).join('');
+  document.getElementById('fCat').innerHTML='<button type="button" class="pill" data-v="todas" aria-pressed="true">Todas</button>'+ks.map(function(k){return '<button type="button" class="pill" data-v="'+k+'" aria-pressed="false">'+CATS[k].nombre+'</button>'}).join('');
+  pintarTodos();
+}
+(function(){
+  var f=document.getElementById('filtros');
+  f.addEventListener('click',function(e){var p=e.target.closest('.pill');if(!p)return;if(p.parentNode.id==='fPres')fil.pres=p.dataset.v;else fil.cat=p.dataset.v;pintarTodos()});
+  document.getElementById('fOrden').addEventListener('change',function(e){fil.orden=e.target.value;pintarTodos()});
+  document.getElementById('todos').addEventListener('click',function(e){if(e.target.id==='fLimpiar'){fil.pres='todos';fil.cat='todas';pintarTodos()}});
+  document.querySelectorAll('[data-ir]').forEach(function(b){b.addEventListener('click',function(){var t=document.getElementById(b.dataset.ir);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+  var ar=document.getElementById('arcos'),tick=false;
+  addEventListener('scroll',function(){if(tick)return;tick=true;requestAnimationFrame(function(){tick=false;if(scrollY<1400)ar.style.setProperty('--py',scrollY*.08)})},{passive:true});
+})();
 function pintarLista(k){
   var c=CATS[k];
   document.getElementById('listaTitulo').innerHTML=c.titulo;
@@ -588,7 +735,7 @@ function ruta(){
   else if(item){pintarDetalle(cat,item);ver('det');activo=cat;barra(item);document.title='Nuestro detalle · '+item.nombre}
   else if(CATS[cat]){pintarLista(cat);ver('lista');activo=cat;barra(null);document.title='Nuestro detalle · '+CATS[cat].nombre+' para la pareja'}
   else{ver('inicio');barra(null);document.title=TITULO0}
-  document.querySelectorAll('#drawer a').forEach(function(a){a.classList.toggle('on',a.dataset.r===activo)});
+  document.querySelectorAll('#drawer a,#navlinks a').forEach(function(a){a.classList.toggle('on',a.dataset.r===activo)});
   cerrarMenu();scrollTo(0,0);dispatchEvent(new Event('resize'));
 }
 function cerrarMenu(){document.getElementById('drawer').classList.remove('on');var b=document.getElementById('burger');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Abrir menú')}
