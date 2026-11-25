@@ -178,6 +178,60 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 .otro{display:inline-block;margin-top:18px;font-size:15px;color:var(--suave);animation:sube 1s 1.4s both}
 .otro a{color:var(--flor);text-decoration:none;border-bottom:1px solid var(--flor)}
 
+/* ---------- NAVEGACIÓN ---------- */
+.top{position:fixed;top:0;left:0;right:0;z-index:60;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;background:rgba(248,242,241,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(189,180,186,.5)}
+.top .marca{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:26px;text-decoration:none}
+.burger{width:44px;height:44px;border:0;background:none;cursor:pointer;display:grid;place-content:center;gap:6px;margin-right:-10px}
+.burger i{display:block;width:24px;height:1.6px;background:var(--tinta);transition:transform .3s,opacity .3s}
+.burger[aria-expanded=true] i:nth-child(1){transform:translateY(7.6px) rotate(45deg)}
+.burger[aria-expanded=true] i:nth-child(2){opacity:0}
+.burger[aria-expanded=true] i:nth-child(3){transform:translateY(-7.6px) rotate(-45deg)}
+.drawer{position:fixed;top:60px;left:0;right:0;z-index:55;background:var(--perla);border-bottom:1px solid var(--plata);padding:8px 6vw 22px;display:none;box-shadow:0 30px 40px -30px rgba(43,24,34,.35)}
+.drawer.on{display:block}
+.drawer a{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(189,180,186,.6);text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400}
+.drawer a small{font-family:'Hanken Grotesk',sans-serif;font-size:14px;color:var(--suave)}
+.drawer a.on{color:var(--flor);font-style:italic}
+.vista{padding-top:60px}
+.vista[hidden]{display:none}
+@media(min-width:901px){.drawer{left:auto;width:380px;border-left:1px solid var(--plata)}}
+
+/* inicio */
+.portada{max-width:1180px;margin:0 auto;padding:9vh 6vw 6vh}
+.portada h1{font-size:clamp(56px,9vw,120px);font-style:italic;font-weight:300;line-height:.98}
+.portada h1 span{display:block}
+.portada p{color:var(--suave);font-size:19px;max-width:30em;margin-top:22px}
+.cats{max-width:1180px;margin:0 auto;padding:0 6vw 12vh;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.cat{position:relative;display:block;text-decoration:none;border-radius:26px;overflow:hidden;aspect-ratio:4/5;background:#eadfdf}
+.cat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.cat:hover img{transform:scale(1.04)}
+.cat .rot{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(248,242,241,.94);border-radius:18px;padding:16px 18px}
+.cat h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;line-height:1}
+.cat span{font-size:14px;color:var(--suave)}
+@media(max-width:700px){.cats{grid-template-columns:1fr}.cat{aspect-ratio:1/1}}
+
+/* listado */
+.cab{max-width:1180px;margin:0 auto;padding:7vh 6vw 30px}
+.cab .atras{font-size:15px;color:var(--suave);text-decoration:none;border-bottom:1px solid var(--plata)}
+.cab h1{font-size:clamp(46px,7vw,92px);font-weight:300;margin-top:22px}
+.cab h1 em{font-style:italic}
+.cab .sub{color:var(--suave);max-width:34em;margin-top:14px;font-size:18px}
+.grilla{max-width:1180px;margin:0 auto;padding:10px 6vw 8vh;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grilla .tarj{flex:none;text-decoration:none;color:inherit}
+.grilla .tarj .cuerpo .pie{margin-top:auto}
+.grilla .btn{display:flex;justify-content:center;width:100%;padding:15px 20px;font-size:16px}
+.vista .nota-p{max-width:1180px;margin:0 auto;padding:0 6vw 12vh;color:var(--suave);font-size:14px}
+@media(max-width:900px){.grilla{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grilla{grid-template-columns:1fr}}
+
+/* detalle genérico */
+.info h1.largo{font-size:clamp(40px,10vw,66px);line-height:1}
+.info h1.largo span{white-space:normal}
+@media(min-width:901px){.info h1.largo{font-size:clamp(44px,4.4vw,68px)}}
+.volver{text-align:center;padding:0 6vw 10vh}
+.foto.g{aspect-ratio:1/1;-webkit-mask-image:none;mask-image:none;background:#fff;max-height:78vh}
+.foto.g img{object-fit:contain;animation:none}
+@media(min-width:901px){.foto.g{border-radius:0 28px 28px 0}}
+
 /* barra móvil */
 .barra{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(248,242,241,.95);backdrop-filter:blur(12px);border-top:1px solid rgba(189,180,186,.6);transform:translateY(110%);transition:transform .4s}
 .barra.on{transform:none}
@@ -193,7 +247,6 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
   .recibis figure{max-width:420px;border-radius:180px 180px 20px 20px}
   .lista div{grid-template-columns:7.2em 1fr;gap:14px}
   .barra{display:flex}
-  .nav{display:none}
 }
 @media(min-width:901px){
   .info h1{font-size:clamp(56px,5.6vw,92px)}
@@ -211,7 +264,39 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 </head>
 <body>
 
-<header class="nav" id="nav"><b>Nuestro detalle</b><a class="mas" href="#mas-anillos">Más anillos</a><span class="pr" id="precioNav">$ 14.416</span><a class="cta" href="#" data-ml>Comprar ahora</a></header>
+<header class="top">
+  <a class="marca" href="#/">Nuestro detalle</a>
+  <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+</header>
+<nav class="drawer" id="drawer" aria-label="Categorías">
+  <a href="#/" data-r="inicio">Inicio</a>
+  <a href="#/anillos" data-r="anillos">Anillos <small id="nAnillos"></small></a>
+  <a href="#/pulseras" data-r="pulseras">Pulseras <small id="nPulseras"></small></a>
+</nav>
+
+<main>
+<div class="vista" id="v-inicio" hidden>
+  <div class="portada">
+    <h1 class="serif"><span>Un detalle</span><span>para los dos.</span></h1>
+    <p>Regalos para la pareja, de a dos. Elegí qué buscás, mirá el detalle y comprás directo en Mercado Libre.</p>
+  </div>
+  <div class="cats" id="cats"></div>
+</div>
+
+<div class="vista" id="v-lista" hidden>
+  <div class="cab">
+    <a class="atras" href="#/">Inicio</a>
+    <h1 class="serif" id="listaTitulo"></h1>
+    <p class="sub" id="listaSub"></p>
+  </div>
+  <div class="grilla" id="grilla"></div>
+  <p class="nota-p">Las estrellas y las ventas son las que muestra cada publicación en Mercado Libre. Los precios se renuevan una vez por semana: confirmalos en la publicación antes de pagar.</p>
+</div>
+
+<div class="vista" id="v-det" hidden></div>
+
+<div class="vista" id="v-flor" hidden>
+
 
 <section class="hero" id="inicio">
   <div class="hero-in">
@@ -238,7 +323,7 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Envío Full</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="13" rx="2"/><path d="M2.5 10.5h19"/></svg>Todos los medios de pago</span>
       </div>
-      <p class="otro">¿Buscás otro modelo? <a href="#mas-anillos">Mirá más anillos para la pareja</a></p>
+      <p class="otro">¿Buscás otro modelo? <a href="#/anillos">Mirá más anillos para la pareja</a></p>
     </div>
   </div>
 </section>
@@ -326,22 +411,6 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 </section>
 
 
-<section class="seccion catalogo" id="mas-anillos">
-  <div class="wrap">
-    <div class="titulo"><h2 class="serif">Anillos para <em>la pareja</em></h2><p class="sub">Más sets para elegir, todos de a dos. Tocá la foto para ver otra vista.</p></div>
-    <div class="carrusel" id="carrusel"></div>
-    <p class="nota">Las estrellas y las ventas son las que muestra cada publicación en Mercado Libre. Los precios se renuevan una vez por semana: confirmalos en la publicación antes de pagar. ¿Preferís una pulsera? <a href="#pulseras">Mirá las pulseras para la pareja</a>.</p>
-  </div>
-</section>
-
-<section class="seccion catalogo" id="pulseras">
-  <div class="wrap">
-    <div class="titulo"><h2 class="serif">Pulseras para <em>la pareja</em></h2><p class="sub">Otra forma de decir lo mismo, para llevar en la muñeca. Tocá la foto para ver otra vista.</p></div>
-    <div class="carrusel" id="carrusel2"></div>
-    <p class="nota">Las estrellas y las ventas son las que muestra cada publicación en Mercado Libre. Los precios se renuevan una vez por semana: confirmalos en la publicación antes de pagar.</p>
-  </div>
-</section>
-
 <section class="seccion" id="preguntas">
   <div class="wrap">
     <div class="titulo"><h2 class="serif">Antes de <em>decidir</em></h2></div>
@@ -355,6 +424,10 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
   </div>
 </section>
 
+<div class="volver"><a class="cta" href="#/anillos">Ver todos los anillos</a></div>
+</div>
+</main>
+
 <footer>
   <div class="wrap"><p class="legal">Esta página es independiente y no pertenece a Mercado Libre. Si comprás desde el botón, puedo recibir una comisión sin costo extra para vos. El precio, el stock y el envío los define el vendedor y pueden cambiar: confirmá los datos finales en Mercado Libre antes de pagar.</p></div>
 </footer>
@@ -367,7 +440,7 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 <script>
 var LINK_ML='https://meli.la/15a5Y1n';
 var FOTOS=[['img/hero.jpg','Los dos anillos apoyados uno sobre otro'],['img/anillos-solo.jpg','El set de dos anillos sobre fondo blanco'],['img/anillo-flor.jpg','Anillo con flor de cerezo'],['img/anillo-rama.jpg','Anillo con rama de esmalte negro'],['img/anillos-par.jpg','Los dos anillos juntos']];
-document.querySelectorAll('[data-ml]').forEach(function(a){a.href=LINK_ML;a.target='_blank';a.rel='noopener sponsored'});
+document.querySelectorAll('#v-flor [data-ml]').forEach(function(a){a.href=LINK_ML;a.target='_blank';a.rel='noopener sponsored'});
 
 /* galería del producto */
 var foto=document.getElementById('foto'),mini=document.getElementById('mini');
@@ -385,48 +458,113 @@ function ponerPrecio(p){
   new IntersectionObserver(function(es,o){if(es[0].isIntersecting&&!hecho){hecho=true;
     if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.innerHTML='$ '+fmt(ent)+'<sup>'+cent+'</sup>'}else{requestAnimationFrame(paso)}o.disconnect()}},{threshold:.5}).observe(el);
   document.getElementById('precioHero').innerHTML='$ '+fmt(ent)+'<sup>'+cent+'</sup>';
-  document.getElementById('precioNav').textContent='$ '+fmt(ent);
-  document.getElementById('precioBarra').innerHTML='$ '+fmt(ent)+'<small>Set de dos anillos</small>';
   var f=document.getElementById('fecha'),h=document.getElementById('fechaHero');
   if(p.actualizado&&!p.consultar){var d=new Date(p.actualizado+'T12:00:00');var ds=d.toLocaleDateString('es-AR',{day:'numeric',month:'long'});
     f.textContent='Precio al '+ds+'. Confirmalo en Mercado Libre antes de comprar.';h.textContent='el set completo, precio al '+ds}
   else{f.textContent='Consultá el precio actual en Mercado Libre.';h.textContent='el set completo, consultá el precio actual'}
 }
 
-/* catálogo: más anillos para la pareja */
-var CATALOGO=[
- {id:'estuche',nombre:'Corazón partido, con estuche',txt:'Cada anillo lleva una mitad del corazón. Ajustables y con estuche en forma de corazón.',fotos:['img/estuche-1.jpg','img/estuche-3.jpg'],estr:'4,8',op:'116 opiniones',vend:'+500 vendidos',precio:31344,link:'https://meli.la/148Q4RY'},
- {id:'iloveyou',nombre:'Medio corazón, I love you',txt:'Dos anillos con un corazón que se completa al juntarlos y la frase grabada por dentro.',fotos:['img/iloveyou-1.jpg'],estr:'4,9',op:'11 opiniones',vend:'+50 vendidos',precio:18420,link:'https://meli.la/1EqEqY3'},
- {id:'modernos',nombre:'Solitario y banda, ajustables',txt:'Un anillo con piedra central y otro de banda con relieve. Se ajustan al dedo.',fotos:['img/modernos-1.jpg','img/modernos-2.jpg'],estr:'4,2',op:'130 opiniones',vend:'+500 vendidos',precio:13437,link:'https://meli.la/1p6GkE4'},
- {id:'elegantes',nombre:'Elegantes, con zirconias',txt:'Un par con piedras blancas: uno más ancho y otro más fino, para usar todos los días.',fotos:['img/elegantes-1.jpg','img/elegantes-2.jpg'],estr:'4,1',op:'61 opiniones',vend:'+100 vendidos',precio:13415,link:'https://meli.la/2tVLmoL'},
- {id:'endless',nombre:'Endless love, regulables',txt:'Uno con corazón calado y la frase endless love, el otro con un corazón de piedra.',fotos:['img/endless-1.jpg','img/endless-2.jpg'],estr:'4,1',op:'148 opiniones',vend:'+500 vendidos',precio:15189,link:'https://meli.la/2YTytyA'}
-];
-function cat$(n){return '$ '+fmt(n)}
-function pintarLista(boxId,lista,precios){
-  var box=document.getElementById(boxId);box.innerHTML='';
-  lista.forEach(function(p){
-    var pr=(precios&&precios[p.id]&&precios[p.id].precio)?precios[p.id].precio:p.precio;
-    var a=document.createElement('article');a.className='tarj';
-    var imgs=p.fotos.map(function(f,i){return '<img src="'+f+'" alt="'+p.nombre+(i?' (otra vista)':'')+'" loading="lazy">'}).join('');
-    var pts=p.fotos.length>1?'<div class="pts"><i class="on"></i><i></i></div>':'';
-    a.innerHTML='<div class="ph" role="img" aria-label="'+p.nombre+'">'+imgs+pts+'</div>'+
-     '<div class="cuerpo"><h3>'+p.nombre+'</h3><p>'+p.txt+'</p>'+
-     '<div class="est"><span class="st" aria-hidden="true">★</span> <b>'+p.estr+'</b> · '+p.op+' · '+p.vend+'</div>'+
-     '<div class="pie"><div class="pr">'+cat$(pr)+'</div><a class="cta" href="'+p.link+'" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a></div></div>';
-    var ph=a.querySelector('.ph');
-    if(p.fotos.length>1)ph.onclick=function(){var d=ph.classList.toggle('dos');var is=ph.querySelectorAll('.pts i');is[0].classList.toggle('on',!d);is[1].classList.toggle('on',d)};
-    box.appendChild(a);
-  });
+/* ---------- catálogo y navegación ---------- */
+var OCASIONES=['Un aniversario','Una promesa','San Valentín','Navidad','Un cumpleaños','Porque sí'];
+var FAQ_COMUN=[['¿Cómo se paga?','La compra se hace dentro de Mercado Libre, con Mercado Pago: tarjetas, efectivo y otros medios. Las cuotas y promociones las ves en la publicación.'],['¿Y si algo sale mal?','Comprás con la protección de Mercado Libre. Las condiciones de devolución las confirmás en la publicación antes de pagar.']];
+var CATS={
+ anillos:{nombre:'Anillos',titulo:'Anillos para <em>la pareja</em>',sub:'Sets de promesa, de a dos. Elegí uno y mirá todo el detalle.',unidad:'sets',foto:'img/hero.jpg',items:[
+  {id:'flor',nombre:'Una flor, una rama, una promesa',txt:'Uno lleva la flor de cerezo y el otro la rama: juntos forman el cerezo. Ajustables y hechos a mano.',fotos:['img/anillos-solo.jpg','img/hero.jpg'],estr:'4,6',op:'209 opiniones',vend:'+1000 vendidos',precio:14416.55,link:'https://meli.la/15a5Y1n'},
+  {id:'estuche',nombre:'Corazón partido, con estuche',tag:'Set de dos anillos, con estuche',txt:'Cada anillo lleva una mitad del corazón. Ajustables y con estuche en forma de corazón.',fotos:['img/estuche-1.jpg','img/estuche-3.jpg'],estr:'4,8',op:'116 opiniones',vend:'+500 vendidos',precio:31344.3,link:'https://meli.la/148Q4RY',recibis:[['El set','Dos anillos: uno para cada uno'],['Diseño','Cada anillo lleva una mitad del corazón'],['Talle','Ajustables'],['Entrega','Con estuche en forma de corazón']]},
+  {id:'iloveyou',nombre:'Medio corazón, I love you',tag:'Set de dos anillos de promesa',txt:'Dos anillos con un corazón que se completa al juntarlos y la frase grabada por dentro.',fotos:['img/iloveyou-1.jpg'],estr:'4,9',op:'11 opiniones',vend:'+50 vendidos',precio:18420,link:'https://meli.la/1EqEqY3',recibis:[['El set','Dos anillos: uno para cada uno'],['Diseño','Un corazón que se completa al juntar los dos'],['Grabado','La frase I love you, por dentro']]},
+  {id:'modernos',nombre:'Solitario y banda, ajustables',tag:'Set de dos anillos, uno para cada uno',txt:'Un anillo con piedra central y otro de banda con relieve. Se ajustan al dedo.',fotos:['img/modernos-1.jpg','img/modernos-2.jpg'],estr:'4,2',op:'130 opiniones',vend:'+500 vendidos',precio:13437,link:'https://meli.la/1p6GkE4',recibis:[['El set','Dos anillos: uno para cada uno'],['El primero','Solitario, con piedra central'],['El segundo','Banda con relieve'],['Talle','Ajustables']]},
+  {id:'elegantes',nombre:'Elegantes, con zirconias',tag:'Set de dos anillos, uno para cada uno',txt:'Un par con piedras blancas: uno más ancho y otro más fino, para usar todos los días.',fotos:['img/elegantes-1.jpg','img/elegantes-2.jpg'],estr:'4,1',op:'61 opiniones',vend:'+100 vendidos',precio:13415,link:'https://meli.la/2tVLmoL',recibis:[['El set','Dos anillos: uno para cada uno'],['Diseño','Uno más ancho y otro más fino'],['Piedras','Zirconias blancas']]},
+  {id:'endless',nombre:'Endless love, regulables',tag:'Set de dos anillos, uno para cada uno',txt:'Uno con corazón calado y la frase endless love, el otro con un corazón de piedra.',fotos:['img/endless-1.jpg','img/endless-2.jpg'],estr:'4,1',op:'148 opiniones',vend:'+500 vendidos',precio:15189,link:'https://meli.la/2YTytyA',recibis:[['El set','Dos anillos: uno para cada uno'],['El primero','Corazón calado con la frase endless love'],['El segundo','Corazón de piedra'],['Talle','Regulables']]}
+ ]},
+ pulseras:{nombre:'Pulseras',titulo:'Pulseras para <em>la pareja</em>',sub:'Otra forma de decir lo mismo, para llevar en la muñeca.',unidad:'pares',foto:'img/nudo-1.jpg',items:[
+  {id:'nudo',nombre:'Nudo infinito, plateadas',tag:'Set de dos pulseras, una para cada uno',txt:'Una pulsera fina con un nudo para cada uno. Se ajustan a la muñeca y combinan con todo.',fotos:['img/nudo-1.jpg','img/nudo-2.jpg'],estr:'4,8',op:'293 opiniones',vend:'+1000 vendidos',precio:21120,link:'https://meli.la/2NjCSdP',recibis:[['El set','Dos pulseras: una para cada uno'],['Diseño','Cadena fina con un nudo'],['Color','Plateado'],['Ajuste','A la muñeca']]},
+  {id:'iman',nombre:'Corazón con imán, con estuche',tag:'Set de dos pulseras, con estuche',txt:'Cada pulsera lleva una mitad del corazón: al juntarlas, el imán las une. Vienen en estuche para regalar.',fotos:['img/iman-1.jpg','img/iman-2.jpg'],estr:'4,3',op:'78 opiniones',vend:'+100 vendidos',precio:22969,link:'https://meli.la/1oixjK2',recibis:[['El set','Dos pulseras: una para cada uno'],['Diseño','Cada una lleva una mitad de corazón con imán'],['Material','Titanio'],['Entrega','En estuche para regalar']]},
+  {id:'grabado',nombre:'Con fecha o nombre grabado',tag:'Set de dos pulseras grabadas',txt:'Dos pulseras de acero quirúrgico con chapa grabada. Después de comprar, le avisás al vendedor qué querés grabar.',fotos:['img/grabado-1.jpg'],estr:'4,7',op:'152 opiniones',vend:'+500 vendidos',precio:34999,link:'https://meli.la/1roPgTx',recibis:[['El set','Dos pulseras: una para cada uno'],['Material','Acero quirúrgico'],['Grabado','Una fecha o un nombre en la chapa'],['Talle','Ajustable']],faq:[['¿Cómo pido el grabado?','Cuando hacés la compra, le escribís al vendedor por mensaje qué querés grabar y con qué letra. Mientras antes lo indiques, antes lo preparan.']]}
+ ]}
+};
+var PRECIOS=null,FLOR_PRECIO=14416.55;
+function cat$(n){var e=Math.floor(n),c=Math.round((n-e)*100);return '$ '+fmt(e)+(c?'<sup>'+String(c).padStart(2,'0')+'</sup>':'')}
+function precioDe(p){if(p.id==='flor')return FLOR_PRECIO;return(PRECIOS&&PRECIOS[p.id]&&PRECIOS[p.id].precio)?PRECIOS[p.id].precio:p.precio}
+function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function buscar(c,id){var l=CATS[c];if(!l)return null;for(var i=0;i<l.items.length;i++)if(l.items[i].id===id)return l.items[i];return null}
+
+function pintarInicio(){
+  document.getElementById('nAnillos').textContent=CATS.anillos.items.length+' sets';
+  document.getElementById('nPulseras').textContent=CATS.pulseras.items.length+' pares';
+  document.getElementById('cats').innerHTML=['anillos','pulseras'].map(function(k){var c=CATS[k];
+    return '<a class="cat" href="#/'+k+'"><img src="'+c.foto+'" alt="" loading="lazy"><div class="rot"><h2>'+c.nombre+'</h2><span>'+c.items.length+' '+c.unidad+' para elegir</span></div></a>'}).join('');
 }
-/* pulseras para la pareja */
-var PULSERAS=[
- {id:'nudo',nombre:'Nudo infinito, plateadas',txt:'Una pulsera fina con un nudo para cada uno. Se ajustan a la muñeca y combinan con todo.',fotos:['img/nudo-1.jpg','img/nudo-2.jpg'],estr:'4,8',op:'293 opiniones',vend:'+1000 vendidos',precio:21120,link:'https://meli.la/2NjCSdP'},
- {id:'iman',nombre:'Corazón con imán, con estuche',txt:'Cada pulsera lleva una mitad del corazón: al juntarlas, el imán las une. Vienen en estuche para regalar.',fotos:['img/iman-1.jpg','img/iman-2.jpg'],estr:'4,3',op:'78 opiniones',vend:'+100 vendidos',precio:22969,link:'https://meli.la/1oixjK2'},
- {id:'grabado',nombre:'Con fecha o nombre grabado',txt:'Dos pulseras de acero quirúrgico con chapa grabada. Después de comprar, le avisás al vendedor qué querés grabar.',fotos:['img/grabado-1.jpg'],estr:'4,7',op:'152 opiniones',vend:'+500 vendidos',precio:34999,link:'https://meli.la/1roPgTx'}
-];
-function pintarCatalogo(precios){pintarLista('carrusel',CATALOGO,precios);pintarLista('carrusel2',PULSERAS,precios)}
-pintarCatalogo(null);
-fetch('precio.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(p){ponerPrecio(p);pintarCatalogo(p.productos)}).catch(function(){});
+function pintarLista(k){
+  var c=CATS[k];
+  document.getElementById('listaTitulo').innerHTML=c.titulo;
+  document.getElementById('listaSub').textContent=c.sub;
+  document.getElementById('grilla').innerHTML=c.items.map(function(p){
+    return '<a class="tarj" href="#/'+k+'/'+p.id+'"><div class="ph" role="img" aria-label="'+esc(p.nombre)+'"><img src="'+p.fotos[0]+'" alt="'+esc(p.nombre)+'" loading="lazy"></div>'+
+     '<div class="cuerpo"><h3>'+esc(p.nombre)+'</h3><p>'+esc(p.txt)+'</p>'+
+     '<div class="est"><span class="st" aria-hidden="true">★</span> <b>'+p.estr+'</b> · '+p.op+' · '+p.vend+'</div>'+
+     '<div class="pie"><div class="pr">'+cat$(precioDe(p))+'</div><span class="cta btn">Ver detalle</span></div></div></a>'}).join('');
+}
+var SVG_FLECHA='<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>';
+function pintarDetalle(k,p){
+  var pr=precioDe(p),e=Math.floor(pr),c=Math.round((pr-e)*100),sup=c?'<sup>'+String(c).padStart(2,'0')+'</sup>':'';
+  var n=parseFloat(String(p.estr).replace(',','.')),est='★★★★★'.slice(0,Math.round(n))+'☆☆☆☆☆'.slice(0,5-Math.round(n));
+  var fecha=(PRECIOS&&PRECIOS[p.id]&&PRECIOS[p.id].consultar===false)||(PRECIOS&&PRECIOS[p.id]&&PRECIOS[p.id].consultar===undefined)?'precio publicado en Mercado Libre':'precio de referencia, confirmalo en Mercado Libre';
+  var faq=(p.faq||[]).concat(FAQ_COMUN).map(function(f){return '<details><summary>'+f[0]+'</summary><p>'+f[1]+'</p></details>'}).join('');
+  var lista=p.recibis.map(function(r){return '<div><dt>'+r[0]+'</dt><dd>'+r[1]+'</dd></div>'}).join('');
+  var foto2=p.fotos[1]||p.fotos[0];
+  document.getElementById('v-det').innerHTML=
+  '<section class="hero"><div class="hero-in"><div class="visor"><div class="foto g"><img id="gfoto" src="'+p.fotos[0]+'" alt="'+esc(p.nombre)+'" width="1075" height="806"></div><div class="mini" id="gmini" role="group" aria-label="Fotos del producto"></div></div>'+
+  '<div class="info"><p class="tag">'+p.tag+'</p><h1 class="serif largo">'+esc(p.nombre)+'</h1>'+
+  '<div class="estrellas"><span class="st" aria-hidden="true">'+est+'</span><span><b>'+p.estr+'</b> de 5</span><span>'+p.op+' · '+p.vend+'</span></div>'+
+  '<div class="precio-h"><div class="v">$ '+fmt(e)+sup+'</div><div class="n">el set completo, '+fecha+'</div></div>'+
+  '<div class="acc"><a class="cta grande" href="'+p.link+'" target="_blank" rel="noopener sponsored">Comprar en Mercado Libre '+SVG_FLECHA+'</a><small>Pagás y recibís dentro de Mercado Libre</small></div>'+
+  '<div class="garantias"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Compra protegida</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="13" rx="2"/><path d="M2.5 10.5h19"/></svg>Todos los medios de pago</span></div>'+
+  '<p class="otro"><a href="#/'+k+'">Ver todos: '+CATS[k].nombre.toLowerCase()+' para la pareja</a></p></div></div></section>'+
+  '<section class="seccion"><div class="wrap"><div class="titulo"><h2 class="serif">Qué <em>recibís</em></h2></div><div class="recibis"><div><dl class="lista">'+lista+'</dl><p class="nota">Las fotos y las medidas exactas las ves en la publicación de Mercado Libre.</p></div><figure><img src="'+foto2+'" alt="'+esc(p.nombre)+'" loading="lazy" style="object-fit:contain;background:#fff"></figure></div></div></section>'+
+  '<section class="seccion regalar"><div class="wrap"><div class="titulo"><h2 class="serif">Para decirlo <em>sin palabras</em></h2></div><div class="ocasiones">'+OCASIONES.map(function(o){return '<div class="oc">'+o+'</div>'}).join('')+'</div><p class="nota">Un regalo chico, que se lleva todos los días.</p></div></section>'+
+  '<section class="seccion final"><div class="wrap"><span class="serif chico">hoy, para los dos</span><div class="monto">$ '+fmt(e)+sup+'</div><p class="nota">Precio publicado en Mercado Libre</p><a class="cta grande" href="'+p.link+'" target="_blank" rel="noopener sponsored">Comprar en Mercado Libre '+SVG_FLECHA+'</a>'+
+  '<div class="datos"><div><b>'+p.vend.replace(' vendidos','')+'</b><span>vendidos</span></div><div><b>'+p.estr+' de 5</b><span>'+p.op+'</span></div></div></div></section>'+
+  '<section class="seccion"><div class="wrap"><div class="titulo"><h2 class="serif">Antes de <em>decidir</em></h2></div><div class="faq">'+faq+'</div></div></section>'+
+  '<div class="volver"><a class="cta" href="#/'+k+'">Ver todos: '+CATS[k].nombre.toLowerCase()+'</a></div>';
+  var foto=document.getElementById('gfoto'),mini=document.getElementById('gmini');
+  if(p.fotos.length>1)p.fotos.forEach(function(f,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ver foto '+(i+1));if(i===0)b.className='on';
+    b.innerHTML='<img src="'+f+'" alt="">';
+    b.onclick=function(){foto.style.opacity=0;setTimeout(function(){foto.src=f;foto.style.opacity=1},180);[].forEach.call(mini.children,function(x){x.classList.remove('on')});b.classList.add('on')};
+    mini.appendChild(b)});
+}
+
+/* barra de compra del celular */
+var barraItem=null;
+function barra(item){
+  barraItem=item;var b=document.getElementById('barra');
+  if(!item){b.classList.remove('on');b.style.display='none';return}
+  b.style.display='';
+  var pr=precioDe(item);document.getElementById('precioBarra').innerHTML='$ '+fmt(Math.floor(pr))+'<small>'+(item.id==='flor'?'Set de dos anillos':'Set de dos')+'</small>';
+  var a=b.querySelector('a');a.href=item.link;a.target='_blank';a.rel='noopener sponsored';
+  b.classList.toggle('on',scrollY>innerHeight*.5);
+}
+addEventListener('scroll',function(){if(barraItem)document.getElementById('barra').classList.toggle('on',scrollY>innerHeight*.5)},{passive:true});
+
+/* rutas: #/  #/anillos  #/anillos/flor */
+var TITULO0='Nuestro detalle · Regalos para la pareja';
+function ruta(){
+  var h=location.hash.replace(/^#\/?/,'').split('/'),cat=h[0],id=h[1];
+  var vs=['inicio','lista','det','flor'];
+  function ver(n){vs.forEach(function(v){document.getElementById('v-'+v).hidden=(v!==n)})}
+  var item=cat&&id?buscar(cat,id):null,activo='inicio';
+  if(item&&item.id==='flor'){ver('flor');activo=cat;barra(item);document.title='Nuestro detalle · '+item.nombre}
+  else if(item){pintarDetalle(cat,item);ver('det');activo=cat;barra(item);document.title='Nuestro detalle · '+item.nombre}
+  else if(CATS[cat]){pintarLista(cat);ver('lista');activo=cat;barra(null);document.title='Nuestro detalle · '+CATS[cat].nombre+' para la pareja'}
+  else{ver('inicio');barra(null);document.title=TITULO0}
+  document.querySelectorAll('#drawer a').forEach(function(a){a.classList.toggle('on',a.dataset.r===activo)});
+  cerrarMenu();scrollTo(0,0);dispatchEvent(new Event('resize'));
+}
+function cerrarMenu(){document.getElementById('drawer').classList.remove('on');var b=document.getElementById('burger');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Abrir menú')}
+document.getElementById('burger').onclick=function(){var d=document.getElementById('drawer'),on=d.classList.toggle('on');this.setAttribute('aria-expanded',on?'true':'false');this.setAttribute('aria-label',on?'Cerrar menú':'Abrir menú')};
+addEventListener('keydown',function(e){if(e.key==='Escape')cerrarMenu()});
+addEventListener('hashchange',ruta);
+pintarInicio();ruta();
+fetch('precio.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(p){PRECIOS=p.productos;if(p.precio)FLOR_PRECIO=p.precio;ponerPrecio(p);ruta()}).catch(function(){});
 
 /* el encuentro: los anillos se acercan mientras se baja */
 (function(){
@@ -435,7 +573,7 @@ fetch('precio.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(
   var quieto=matchMedia('(prefers-reduced-motion:reduce)').matches,actual=-1;
   function ease(x){return x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2}
   function pintar(){
-    var r=sec.getBoundingClientRect(),total=sec.offsetHeight-innerHeight;
+    if(!sec.offsetHeight)return;var r=sec.getBoundingClientRect(),total=sec.offsetHeight-innerHeight;
     var p=quieto?1:Math.min(1,Math.max(0,-r.top/total));
     var m=ease(Math.min(1,p/.6)),d=A.offsetWidth,s=d*(1.22-.7*m);
     A.style.transform='translate('+(-s/2)+'px,0) rotate('+(-14*(1-m))+'deg)';
@@ -453,16 +591,10 @@ fetch('precio.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(
 (function(){
   if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
   var im=document.getElementById('parallax'),box=im.parentNode;
-  function z(){var r=box.getBoundingClientRect(),k=Math.min(1,Math.max(0,(innerHeight-r.top)/(innerHeight+r.height)));im.style.transform='scale('+(1+.12*k)+')'}
+  function z(){if(!box.offsetHeight)return;var r=box.getBoundingClientRect(),k=Math.min(1,Math.max(0,(innerHeight-r.top)/(innerHeight+r.height)));im.style.transform='scale('+(1+.12*k)+')'}
   addEventListener('scroll',function(){requestAnimationFrame(z)},{passive:true});z();
 })();
 
-/* barras de compra al bajar del primer bloque */
-(function(){
-  var b=document.getElementById('barra'),n=document.getElementById('nav'),h=document.getElementById('inicio');
-  function f(){var pasó=scrollY>h.offsetHeight*.75;b.classList.toggle('on',pasó);n.classList.toggle('on',pasó)}
-  addEventListener('scroll',f,{passive:true});f();
-})();
 </script>
 </body>
 </html>

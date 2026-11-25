@@ -1,8 +1,6 @@
 name: Actualizar precio
 
 on:
-  schedule:
-    - cron: '0 11 * * 1'   # lunes 8:00 hora Argentina
   workflow_dispatch:
 
 permissions:
