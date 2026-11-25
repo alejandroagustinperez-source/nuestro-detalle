@@ -392,6 +392,39 @@ footer{margin-top:50px;border-top:1px solid var(--linea);padding:34px 4vw 40px}
   *{animation:none!important;transition:none!important}
   .encuentro{height:auto}.pin{position:static;height:auto;padding:10vh 0}.escena{height:60vh}
 }
+
+/* DETALLE tipo tienda */
+.pd{padding-bottom:70px}
+.pd-top{display:grid;gap:18px;margin-top:6px}
+.pd-gal{display:flex;flex-direction:column-reverse;gap:10px;min-width:0}
+.pd-foto{background:#fff;border:1px solid var(--linea);border-radius:20px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pd-foto img{width:100%;height:100%;object-fit:contain}
+.pd-minis{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.pd-minis::-webkit-scrollbar{display:none}
+.pd-minis button{flex:none;width:60px;height:60px;border-radius:12px;border:1.5px solid var(--linea);background:#fff;padding:2px;cursor:pointer;overflow:hidden}
+.pd-minis button.on{border-color:var(--flor);box-shadow:0 0 0 1.5px var(--flor)}
+.pd-minis img{width:100%;height:100%;object-fit:cover;border-radius:9px}
+.pd-box{background:#fff;border:1px solid var(--linea);border-radius:20px;padding:22px 20px;min-width:0;align-self:start}
+.pd-ven{font-size:13px;color:var(--suave);margin-bottom:6px}
+.pd-box h1{font-size:clamp(24px,3vw,32px);font-weight:500;line-height:1.15}
+.pd-est{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--suave);margin-top:10px;min-height:20px}
+.pd-est b{color:var(--tinta)}.pd-est .st{color:var(--flor);letter-spacing:1px}
+.pd-precio{font:500 clamp(34px,5vw,44px)/1.1 'DM Sans',sans-serif;color:var(--tinta);margin-top:14px}
+.pd-precio sup{font-size:.45em;margin-left:2px;vertical-align:.8em}
+.pd-sub{font-size:13.5px;color:var(--suave);margin:4px 0 18px}
+.pd-box .cta{width:100%;white-space:normal;padding:17px 20px;font-size:17px;justify-content:center;text-align:center}
+.pd-gar{list-style:none;display:grid;gap:11px;margin-top:20px;padding-top:18px;border-top:1px solid var(--linea);font-size:14px;color:var(--suave)}
+.pd-gar li{display:flex;gap:11px;align-items:center}
+.pd-gar svg{flex:none;width:22px;height:22px;color:var(--flor)}
+.pd-card .lista{border-top:0}.pd-card{background:#fff;border:1px solid var(--linea);border-radius:20px;padding:8px 20px 20px;max-width:780px}
+.pd-card .nota{margin-top:14px;color:var(--suave);font-size:14.5px}
+@media(min-width:901px){
+  .pd-top{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:34px;margin-top:14px}
+  .pd-gal{flex-direction:row}
+  .pd-minis{flex-direction:column;overflow:visible}
+  .pd-foto{flex:1;max-height:640px}
+  .pd-box{position:sticky;top:calc(var(--hh) + 18px);padding:28px 26px}
+}
 </style>
 </head>
 <body>
@@ -758,29 +791,35 @@ var SVG_FLECHA='<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strok
 function pintarDetalle(k,p){
   var pr=precioDe(p),e=Math.floor(pr),c=Math.round((pr-e)*100),sup=c?'<sup>'+String(c).padStart(2,'0')+'</sup>':'';
   var n=p.estr?parseFloat(String(p.estr).replace(',','.')):0,est='★★★★★'.slice(0,Math.round(n))+'☆☆☆☆☆'.slice(0,5-Math.round(n));
-  var fecha=(PRECIOS&&PRECIOS[p.id]&&PRECIOS[p.id].consultar===false)||(PRECIOS&&PRECIOS[p.id]&&PRECIOS[p.id].consultar===undefined)?'precio publicado en Mercado Libre':'precio de referencia, confirmalo en Mercado Libre';
+  var fecha=(PRECIOS&&PRECIOS[p.id]&&PRECIOS[p.id].consultar===false)||(PRECIOS&&PRECIOS[p.id]&&PRECIOS[p.id].consultar===undefined)?'Precio publicado en Mercado Libre':'Precio de referencia, confirmalo en Mercado Libre';
   var faq=(p.faq||[]).concat(FAQ_COMUN).map(function(f){return '<details><summary>'+f[0]+'</summary><p>'+f[1]+'</p></details>'}).join('');
   var lista=p.recibis.map(function(r){return '<div><dt>'+r[0]+'</dt><dd>'+r[1]+'</dd></div>'}).join('');
-  var foto2=p.fotos[1]||p.fotos[0];
+  var rel=listaTodos().filter(function(x){return x.p.id!==p.id}).sort(function(a,c){return (c.k===k)-(a.k===k)||Math.abs(precioDe(a.p)-pr)-Math.abs(precioDe(c.p)-pr)}).slice(0,8);
+  var IC='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">';
   document.getElementById('v-det').innerHTML=
-  '<section class="hero"><div class="hero-in"><div class="visor"><div class="foto g"><img id="gfoto" src="'+p.fotos[0]+'" alt="'+esc(p.nombre)+'" width="1075" height="806"></div><div class="mini" id="gmini" role="group" aria-label="Fotos del producto"></div></div>'+
-  '<div class="info"><p class="tag">'+p.tag+'</p><h1 class="serif largo">'+esc(p.nombre)+'</h1>'+
-  '<div class="estrellas">'+(p.estr?'<span class="st" aria-hidden="true">'+est+'</span><span><b>'+p.estr+'</b> de 5</span><span>'+p.op+' · '+p.vend+'</span>':'<span>'+p.vend+'</span>')+'</div>'+
-  '<div class="precio-h"><div class="v">$ '+fmt(e)+sup+'</div><div class="n">el set completo, '+fecha+'</div></div>'+
-  '<div class="acc"><a class="cta grande" href="'+p.link+'" target="_blank" rel="noopener sponsored">Comprar en Mercado Libre '+SVG_FLECHA+'</a><small>Pagás y recibís dentro de Mercado Libre</small></div>'+
-  '<div class="garantias"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Compra protegida</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="13" rx="2"/><path d="M2.5 10.5h19"/></svg>Todos los medios de pago</span></div>'+
-  '<p class="otro"><a href="#/'+k+'">Ver todos: '+CATS[k].nombre.toLowerCase()+' para la pareja</a></p></div></div></section>'+
-  '<section class="seccion"><div class="wrap"><div class="titulo"><h2 class="serif">Qué <em>recibís</em></h2></div><div class="recibis"><div><dl class="lista">'+lista+'</dl><p class="nota">'+(p.nota||'Las fotos y las medidas exactas las ves en la publicación de Mercado Libre.')+'</p></div><figure><img src="'+foto2+'" alt="'+esc(p.nombre)+'" loading="lazy" style="object-fit:contain;background:#fff"></figure></div></div></section>'+
-  '<section class="seccion regalar"><div class="wrap"><div class="titulo"><h2 class="serif">Para decirlo <em>sin palabras</em></h2></div><div class="ocasiones">'+OCASIONES.map(function(o){return '<div class="oc">'+o+'</div>'}).join('')+'</div><p class="nota">Un regalo chico, que se lleva todos los días.</p></div></section>'+
-  '<section class="seccion final"><div class="wrap"><span class="serif chico">hoy, para los dos</span><div class="monto">$ '+fmt(e)+sup+'</div><p class="nota">Precio publicado en Mercado Libre</p><a class="cta grande" href="'+p.link+'" target="_blank" rel="noopener sponsored">Comprar en Mercado Libre '+SVG_FLECHA+'</a>'+
-  '<div class="datos"><div><b>'+p.vend.replace(' vendidos','').replace(' vendido','')+'</b><span>'+(/^\d|^\+/.test(p.vend)?'vendidos':'en Mercado Libre')+'</span></div>'+(p.estr?'<div><b>'+p.estr+' de 5</b><span>'+p.op+'</span></div>':'')+'</div></div></section>'+
-  '<section class="seccion"><div class="wrap"><div class="titulo"><h2 class="serif">Antes de <em>decidir</em></h2></div><div class="faq">'+faq+'</div></div></section>'+
-  '<section class="seccion rel"><div class="wrap">'+filaH('También te puede gustar',listaTodos().filter(function(x){return x.p.id!==p.id}).sort(function(a,c){return (c.k===k)-(a.k===k)||Math.abs(precioDe(a.p)-pr)-Math.abs(precioDe(c.p)-pr)}).slice(0,8),'#/'+k)+'</div></section>'+
-  '<div class="volver"><a class="cta" href="#/'+k+'">Ver todos: '+CATS[k].nombre.toLowerCase()+'</a></div>';
+  '<div class="cont pd">'+
+  '<p class="migas"><a href="#/">Inicio</a> <span>›</span> <a href="#/'+k+'">'+CATS[k].nombre+'</a> <span>›</span> '+esc(p.nombre)+'</p>'+
+  '<div class="pd-top">'+
+    '<div class="pd-gal"><div class="pd-minis" id="gmini" role="group" aria-label="Fotos del producto"></div><div class="pd-foto"><img id="gfoto" src="'+p.fotos[0]+'" alt="'+esc(p.nombre)+'"></div></div>'+
+    '<div class="pd-box">'+
+      '<p class="pd-ven">'+esc(p.vend)+'</p>'+
+      '<h1 class="serif">'+esc(p.nombre)+'</h1>'+
+      '<div class="pd-est">'+(p.estr?'<b>'+p.estr+'</b><span class="st" aria-hidden="true">'+est+'</span><span>'+p.op+'</span>':'')+'</div>'+
+      '<div class="pd-precio">$ '+fmt(e)+sup+'</div>'+
+      '<p class="pd-sub">Set de dos · '+fecha+'</p>'+
+      '<a class="cta grande" href="'+p.link+'" target="_blank" rel="noopener sponsored">Comprar en Mercado Libre</a>'+
+      '<ul class="pd-gar"><li>'+IC+'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Compra protegida: pagás y recibís dentro de Mercado Libre</li><li>'+IC+'<rect x="2.5" y="6" width="19" height="13" rx="2"/><path d="M2.5 10.5h19"/></svg>Todos los medios de pago</li><li>'+IC+'<path d="M3 7h18v13H3zM3 7l3-4h12l3 4M12 7v13"/></svg>Un regalo para los dos</li></ul>'+
+    '</div>'+
+  '</div>'+
+  '<section class="bloque"><div class="bl-cab"><h2 class="serif">Qué recibís</h2></div><div class="pd-card"><dl class="lista">'+lista+'</dl><p class="nota">'+(p.nota||'Las fotos y las medidas exactas las ves en la publicación de Mercado Libre.')+'</p></div></section>'+
+  '<section class="bloque"><div class="bl-cab"><h2 class="serif">Preguntas frecuentes</h2></div><div class="faq">'+faq+'</div></section>'+
+  '<section class="bloque">'+filaH('También te puede gustar',rel,'#/'+k)+'</section>'+
+  '</div>';
   var foto=document.getElementById('gfoto'),mini=document.getElementById('gmini');
   if(p.fotos.length>1)p.fotos.forEach(function(f,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ver foto '+(i+1));if(i===0)b.className='on';
     b.innerHTML='<img src="'+f+'" alt="">';
-    b.onclick=function(){foto.style.opacity=0;setTimeout(function(){foto.src=f;foto.style.opacity=1},180);[].forEach.call(mini.children,function(x){x.classList.remove('on')});b.classList.add('on')};
+    var ir=function(){foto.src=f;[].forEach.call(mini.children,function(x){x.classList.remove('on')});b.classList.add('on')};
+    b.onclick=ir;b.onmouseenter=function(){if(matchMedia('(hover:hover)').matches)ir()};
     mini.appendChild(b)});
 }
 
