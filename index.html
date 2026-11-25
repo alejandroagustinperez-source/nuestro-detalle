@@ -7,7 +7,7 @@
 <meta name="description" content="Regalos para parejas enamoradas: anillos, pulseras, collares, tazas, llaveros, relojes y más. Elegí, mirá el detalle y comprá en Mercado Libre.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --perla:#f8f2f1;      /* fondo, sacado de la foto */
@@ -22,11 +22,11 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Hanken Grotesk',system-ui,sans-serif;background:var(--perla);color:var(--tinta);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:17px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--perla);color:var(--tinta);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:17px}
 img{display:block;max-width:100%}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--flor);outline-offset:3px;border-radius:6px}
-.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;letter-spacing:-.01em;line-height:1.02;text-wrap:balance}
+.serif{font-family:'Playfair Display',Georgia,serif;font-weight:400;letter-spacing:-.015em;line-height:1.08;text-wrap:balance}
 .wrap{max-width:1180px;margin:0 auto;padding:0 6vw}
 .linea{height:1px;background:var(--plata);opacity:.7;border:0}
 
@@ -40,8 +40,8 @@ a{color:inherit}
 /* barra de escritorio */
 .nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 6vw;background:rgba(248,242,241,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(189,180,186,.5);transform:translateY(-110%);transition:transform .4s}
 .nav.on{transform:none}
-.nav b{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px}
-.nav .pr{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:26px}
+.nav b{font-family:'Playfair Display',serif;font-weight:500;font-size:24px}
+.nav .pr{font-family:'Playfair Display',serif;font-weight:500;font-size:26px}
 .nav .cta{padding:11px 24px;font-size:15px}
 
 /* ---------- INICIO ---------- */
@@ -67,7 +67,7 @@ a{color:inherit}
 .estrellas span,.estrellas a{white-space:nowrap}
 .estrellas a{color:var(--suave);text-decoration:none;border-bottom:1px solid var(--plata)}
 .precio-h{margin:18px 0 26px;animation:sube 1s 1s both}
-.precio-h .v{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(76px,11vw,132px);line-height:.88;letter-spacing:-.035em}
+.precio-h .v{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(76px,11vw,132px);line-height:.88;letter-spacing:-.035em}
 .precio-h .v sup{font-size:.3em;vertical-align:top;position:relative;top:.2em;margin-left:.06em;letter-spacing:0}
 .precio-h .n{font-size:14px;color:var(--suave);margin-top:8px}
 .acc{display:flex;flex-direction:column;gap:12px;max-width:440px;animation:sube 1s 1.15s both}
@@ -117,30 +117,30 @@ a{color:inherit}
 
 /* regalar */
 .regalar .ocasiones{border-top:1px solid var(--plata);max-width:820px}
-.regalar .oc{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:22px 0;border-bottom:1px solid var(--plata);font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(34px,5.2vw,60px);line-height:1.05;transition:color .3s,padding .3s}
+.regalar .oc{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:22px 0;border-bottom:1px solid var(--plata);font-family:'Playfair Display',serif;font-style:italic;font-weight:300;font-size:clamp(34px,5.2vw,60px);line-height:1.05;transition:color .3s,padding .3s}
 .regalar .oc:hover{color:var(--flor);padding-left:14px}
-.regalar .oc small{font-family:'Hanken Grotesk',sans-serif;font-style:normal;font-size:14px;color:var(--suave);text-align:right}
+.regalar .oc small{font-family:'DM Sans',sans-serif;font-style:normal;font-size:14px;color:var(--suave);text-align:right}
 .regalar p.nota{margin-top:26px;color:var(--suave);max-width:34em}
 
 /* precio final */
 .final{background:var(--rubor);text-align:center}
 .final .chico{font-size:clamp(32px,4vw,48px);font-style:italic;display:block;margin-bottom:6px}
-.final .monto{font-family:'Cormorant Garamond',serif;font-weight:400;white-space:nowrap;font-size:clamp(60px,16vw,230px);letter-spacing:-.045em;line-height:.95;margin:6px 0 4px}
+.final .monto{font-family:'Playfair Display',serif;font-weight:400;white-space:nowrap;font-size:clamp(60px,16vw,230px);letter-spacing:-.045em;line-height:.95;margin:6px 0 4px}
 .final .monto sup{font-size:.3em;vertical-align:top;position:relative;top:.2em;margin-left:.05em;letter-spacing:0}
 .final .nota{color:var(--suave);font-size:15px;margin-bottom:30px}
 .datos{display:grid;grid-template-columns:repeat(3,1fr);margin:48px auto 0;max-width:560px;border-top:1px solid var(--plata)}
 .datos div{padding:22px 8px 0}
 .datos div+div{border-left:1px solid var(--plata)}
-.datos b{display:block;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:32px;line-height:1.1}
+.datos b{display:block;font-family:'Playfair Display',serif;font-weight:500;font-size:32px;line-height:1.1}
 .datos span{font-size:14px;color:var(--suave)}
 
 /* preguntas */
 .faq{max-width:780px}
 .faq details{border-bottom:1px solid var(--plata)}
 .faq details:first-child{border-top:1px solid var(--plata)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:27px;padding:20px 0}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;font-family:'Playfair Display',serif;font-weight:400;font-size:27px;padding:20px 0}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary:after{content:"+";font-family:'Hanken Grotesk';font-weight:400;font-size:26px;color:var(--flor);transition:transform .3s}
+.faq summary:after{content:"+";font-family:'DM Sans';font-weight:400;font-size:26px;color:var(--flor);transition:transform .3s}
 .faq details[open] summary:after{transform:rotate(45deg)}
 .faq details p{color:var(--suave);padding:0 0 22px;max-width:40em}
 
@@ -164,12 +164,12 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 .tarj .pts i{width:7px;height:7px;border-radius:50%;background:var(--plata)}
 .tarj .pts i.on{background:var(--flor)}
 .tarj .cuerpo{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
-.tarj h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:29px;line-height:1.05}
+.tarj h3{font-family:'Playfair Display',serif;font-weight:500;font-size:29px;line-height:1.05}
 .tarj p{color:var(--suave);font-size:15.5px;margin:8px 0 12px}
 .tarj .est{font-size:14px;color:var(--suave);margin-bottom:12px}
 .tarj .est b{color:var(--tinta)}.tarj .est .st{color:var(--flor);letter-spacing:1px}
 .tarj .pie{margin-top:auto}
-.tarj .pr{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:42px;line-height:1;margin-bottom:14px}
+.tarj .pr{font-family:'Playfair Display',serif;font-weight:500;font-size:42px;line-height:1;margin-bottom:14px}
 .tarj .pr sup{font-size:.4em;vertical-align:top;position:relative;top:.2em;margin-left:.06em}
 .tarj .cta{width:100%;padding:15px 20px;font-size:16px}
 .catalogo .nota{margin-top:26px;color:var(--suave);font-size:14px;max-width:46em}
@@ -180,7 +180,7 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 
 /* ---------- NAVEGACIÓN ---------- */
 .top{position:fixed;top:0;left:0;right:0;z-index:60;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;background:rgba(248,242,241,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(189,180,186,.5)}
-.top .marca{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:26px;text-decoration:none}
+.top .marca{font-family:'Playfair Display',serif;font-weight:500;font-size:26px;text-decoration:none}
 .burger{width:44px;height:44px;border:0;background:none;cursor:pointer;display:grid;place-content:center;gap:6px;margin-right:-10px}
 .burger i{display:block;width:24px;height:1.6px;background:var(--tinta);transition:transform .3s,opacity .3s}
 .burger[aria-expanded=true] i:nth-child(1){transform:translateY(7.6px) rotate(45deg)}
@@ -188,8 +188,8 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 .burger[aria-expanded=true] i:nth-child(3){transform:translateY(-7.6px) rotate(-45deg)}
 .drawer{position:fixed;top:60px;left:0;right:0;z-index:55;background:var(--perla);border-bottom:1px solid var(--plata);padding:8px 6vw 22px;display:none;box-shadow:0 30px 40px -30px rgba(43,24,34,.35)}
 .drawer.on{display:block}
-.drawer a{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(189,180,186,.6);text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400}
-.drawer a small{font-family:'Hanken Grotesk',sans-serif;font-size:14px;color:var(--suave)}
+.drawer a{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(189,180,186,.6);text-decoration:none;font-family:'Playfair Display',serif;font-size:34px;font-weight:400}
+.drawer a small{font-family:'DM Sans',sans-serif;font-size:14px;color:var(--suave)}
 .drawer a.on{color:var(--flor);font-style:italic}
 .vista{padding-top:60px}
 .vista[hidden]{display:none}
@@ -205,7 +205,7 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 .cat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
 .cat:hover img{transform:scale(1.04)}
 .cat .rot{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(248,242,241,.94);border-radius:18px;padding:16px 18px}
-.cat h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;line-height:1}
+.cat h2{font-family:'Playfair Display',serif;font-weight:500;font-size:34px;line-height:1}
 .cat span{font-size:14px;color:var(--suave)}
 @media(max-width:700px){.cats{grid-template-columns:1fr}.cat{aspect-ratio:1/1}}
 
@@ -235,8 +235,8 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 /* barra móvil */
 .barra{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(248,242,241,.95);backdrop-filter:blur(12px);border-top:1px solid rgba(189,180,186,.6);transform:translateY(110%);transition:transform .4s}
 .barra.on{transform:none}
-.barra .p{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px;line-height:1}
-.barra .p small{display:block;font-family:'Hanken Grotesk';font-weight:400;font-size:11.5px;color:var(--suave);margin-top:3px}
+.barra .p{font-family:'Playfair Display',serif;font-weight:500;font-size:30px;line-height:1}
+.barra .p small{display:block;font-family:'DM Sans';font-weight:400;font-size:11.5px;color:var(--suave);margin-top:3px}
 .barra .cta{padding:13px 26px;font-size:16px}
 
 @media(max-width:900px){
@@ -257,85 +257,137 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 }
 @media(max-width:520px){.datos b{font-size:25px;white-space:nowrap}.datos span{font-size:12.5px}.cta.grande{font-size:17px;padding:19px 20px}.regalar .oc small{display:none}}
 
-/* ---------- REDISEÑO INICIO ---------- */
-.navlinks{display:none}
-.ghost{display:inline-flex;align-items:center;justify-content:center;background:none;border:1.5px solid var(--tinta);color:var(--tinta);font:600 17px 'Hanken Grotesk',sans-serif;padding:16.5px 30px;border-radius:999px;cursor:pointer;transition:background .25s,color .25s}
-.ghost:hover{background:var(--tinta);color:var(--perla)}
-.p2 .cta{border:0;cursor:pointer;font-family:inherit}
-.p2{max-width:1240px;margin:0 auto;padding:6vh 6vw 8vh;display:grid;grid-template-columns:1.05fr 1fr;gap:4vw;align-items:center;min-height:calc(100vh - 60px)}
-.p2 h1{font-size:clamp(58px,7.2vw,112px);line-height:.95;font-weight:300}
-.p2 h1 i{font-style:italic;color:var(--flor)}
-.p2-sub{color:var(--suave);font-size:19px;max-width:30em;margin-top:26px}
-.p2-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
-.p2-datos{list-style:none;display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:44px;padding-top:24px;border-top:1px solid var(--plata)}
-.p2-datos li{font-size:14px;color:var(--suave);line-height:1.3}
-.p2-datos b{display:block;font:500 34px/1 'Cormorant Garamond',serif;color:var(--tinta);margin-bottom:4px}
-.p2-txt>*{animation:p2in 1s cubic-bezier(.2,.7,.2,1) both}
-.p2-txt>:nth-child(2){animation-delay:.12s}.p2-txt>:nth-child(3){animation-delay:.24s}.p2-txt>:nth-child(4){animation-delay:.36s}
-@keyframes p2in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-.p2-arcos{position:relative;height:min(74vh,640px);min-height:440px}
-.arco{position:absolute;overflow:hidden;border-radius:999px 999px 28px 28px;background:#eadfdf;box-shadow:0 30px 60px -34px rgba(43,24,34,.5);animation:flota 9s ease-in-out infinite,arcoin 1.4s cubic-bezier(.2,.7,.2,1) both}
-.arco img{width:100%;height:100%;object-fit:cover}
-.arco.a1{left:0;top:6%;width:56%;height:66%;transform:translateY(calc(var(--py,0)*-.5px))}
-.arco.a2{right:0;top:0;width:40%;height:50%;animation-delay:-3s,.15s;transform:translateY(calc(var(--py,0)*-1px))}
-.arco.a3{right:6%;bottom:2%;width:42%;height:44%;animation-delay:-6s,.3s;transform:translateY(calc(var(--py,0)*-.25px))}
-@keyframes flota{0%,100%{translate:0 0}50%{translate:0 -10px}}
-@keyframes arcoin{from{opacity:0;clip-path:inset(18% 0 0 0 round 999px 999px 28px 28px)}to{opacity:1;clip-path:inset(0 round 999px 999px 28px 28px)}}
-.sec{max-width:1180px;margin:0 auto;padding:9vh 6vw 0}
-.sec-cab{margin-bottom:34px}
-.sec-cab h2{font-size:clamp(40px,5.4vw,70px);font-weight:300}
-.sec-cab h2 i{font-style:italic;color:var(--flor)}
-.sec-sub{color:var(--suave);font-size:18px;margin-top:12px}
-.cats2{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.cat2{position:relative;display:block;overflow:hidden;border-radius:24px;aspect-ratio:4/5;background:#eadfdf;text-decoration:none;color:#fff}
-.cat2:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
-.cat2 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
-.cat2:hover img{transform:scale(1.06)}
-.cat2:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(43,24,34,.78))}
-.cat2 div{position:absolute;left:20px;right:20px;bottom:18px;z-index:1;display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
-.cat2 h3{font:400 clamp(26px,2.6vw,36px)/1 'Cormorant Garamond',serif}
-.cat2:first-child h3{font-size:clamp(38px,4vw,56px)}
-.cat2 span{font-size:13.5px;opacity:.9;white-space:nowrap;padding-bottom:3px}
-.sec-reg{scroll-margin-top:70px}
-.filtros{display:grid;gap:14px;margin-bottom:30px}
-.filtros .fila{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}
-.filtros .fila::-webkit-scrollbar{display:none}
-.pill{flex:none;border:1.2px solid var(--plata);background:#fff;color:var(--tinta);font:500 15px 'Hanken Grotesk',sans-serif;padding:10px 18px;border-radius:999px;cursor:pointer;transition:.2s;white-space:nowrap}
+/* ---------- TIENDA ---------- */
+:root{--hh:112px;--card:#fff;--linea:#e8dcdc}
+body{font-family:'DM Sans',system-ui,sans-serif}
+.top{height:var(--hh);display:grid;grid-template-columns:1fr auto;grid-template-areas:"marca burger" "busca busca";align-items:center;gap:0 12px;padding:6px 4vw 10px;background:rgba(248,242,241,.97)}
+.top .marca{grid-area:marca;font:500 25px/1 'Playfair Display',serif;letter-spacing:-.01em;text-decoration:none}
+.top .marca i{color:var(--flor);font-style:italic}
+.burger{grid-area:burger;margin-right:-8px}
+.busca{grid-area:busca;position:relative}
+.busca svg{position:absolute;left:16px;top:50%;width:19px;height:19px;translate:0 -50%;color:var(--suave);pointer-events:none}
+.busca input{width:100%;height:44px;border:1.5px solid var(--linea);background:#fff;border-radius:999px;padding:0 18px 0 46px;font:400 16px 'DM Sans',sans-serif;color:var(--tinta);outline:0;transition:border-color .2s,box-shadow .2s}
+.busca input:focus{border-color:var(--flor);box-shadow:0 0 0 4px rgba(194,58,104,.12)}
+.sug{position:absolute;left:0;right:0;top:52px;background:#fff;border:1px solid var(--linea);border-radius:18px;box-shadow:0 24px 50px -24px rgba(43,24,34,.45);overflow:hidden;z-index:80}
+.sug a{display:grid;grid-template-columns:46px 1fr auto;gap:12px;align-items:center;padding:10px 14px;text-decoration:none;font-size:14.5px}
+.sug a:hover,.sug a.on{background:var(--perla)}
+.sug img{width:46px;height:46px;object-fit:cover;border-radius:10px;background:#eee}
+.sug b{font-weight:600;white-space:nowrap}
+.sug .todo{display:block;text-align:center;color:var(--flor);font-weight:600;padding:12px}
+.vista{padding-top:var(--hh)}
+.drawer{top:var(--hh)}
+.cont{max-width:1240px;margin:0 auto;padding:14px 4vw 0}
+@media(min-width:901px){
+  :root{--hh:70px}
+  .top{grid-template-columns:auto minmax(280px,620px) auto;grid-template-areas:"marca busca burger";justify-content:space-between;gap:30px;padding:0 4vw}
+  .top .marca{font-size:28px}
+}
+/* categorías con foto */
+.cinta{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:6px 0 14px;margin:0 -4vw;padding-left:4vw;padding-right:4vw}
+.cinta::-webkit-scrollbar{display:none}
+.cinta a{flex:none;width:82px;text-align:center;text-decoration:none;font-size:13px;font-weight:500;color:var(--tinta);line-height:1.2}
+.cinta .cfoto{display:block;width:68px;height:68px;margin:0 auto 7px;border-radius:50%;overflow:hidden;background:#eadfdf;border:2px solid #fff;box-shadow:0 0 0 1.5px var(--linea);transition:box-shadow .25s,transform .25s}
+.cinta img{width:100%;height:100%;object-fit:cover}
+.cinta a:hover .cfoto{box-shadow:0 0 0 2px var(--flor);transform:translateY(-2px)}
+@media(min-width:901px){.cinta{justify-content:center;gap:14px}.cinta a{width:96px;font-size:14px}.cinta .cfoto{width:80px;height:80px}}
+/* banner */
+.banner{position:relative;margin-top:4px}
+.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:24px;scroll-behavior:smooth}
+.slides::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:start;display:grid;grid-template-columns:1.1fr .9fr;min-height:210px;text-decoration:none;color:var(--tinta);position:relative;overflow:hidden}
+.slide .tx{padding:24px 0 24px 24px;display:flex;flex-direction:column;justify-content:center;gap:8px;z-index:1}
+.slide h2{font:500 clamp(24px,5.6vw,46px)/1.05 'Playfair Display',serif;letter-spacing:-.015em}
+.slide p{font-size:clamp(14px,2.6vw,18px);opacity:.85;max-width:24em}
+.slide .bt{margin-top:8px;align-self:flex-start;background:var(--tinta);color:#fff;font-weight:600;font-size:14px;padding:10px 20px;border-radius:999px;border:0;font-family:inherit;transition:transform .2s}
+.slide:hover .bt{transform:translateX(3px)}
+.slide .im{position:relative;overflow:hidden}
+.slide .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 6s linear}
+.slide.on .im img{transform:scale(1.06)}
+.slide.s1{background:#f3dfe2}.slide.s2{background:var(--tinta);color:#fff}.slide.s2 .bt{background:#fff;color:var(--tinta)}.slide.s3{background:#e7dcd5}
+.fl{position:absolute;top:50%;translate:0 -50%;width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.92);box-shadow:0 8px 20px -8px rgba(43,24,34,.5);font-size:24px;line-height:1;cursor:pointer;color:var(--tinta);display:none;z-index:3}
+.fl.izq{left:-14px}.fl.der{right:-14px}
+.dots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+.dots i{width:7px;height:7px;border-radius:99px;background:var(--plata);transition:.3s;cursor:pointer}
+.dots i.on{width:22px;background:var(--flor)}
+@media(min-width:901px){.slide{min-height:300px;grid-template-columns:1fr 1fr}.slide .tx{padding:36px 0 36px 48px}.fl{display:grid;place-items:center}}
+/* confianza */
+.confianza{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0 6px}
+.confianza li{display:flex;gap:11px;align-items:flex-start;background:#fff;border:1px solid var(--linea);border-radius:16px;padding:14px;font-size:13px;color:var(--suave);line-height:1.35}
+.confianza svg{flex:none;width:24px;height:24px;color:var(--flor)}
+.confianza b{display:block;color:var(--tinta);font-size:14px;margin-bottom:2px}
+@media(max-width:700px){.confianza{grid-template-columns:1fr}.confianza li{padding:12px 14px}}
+/* bloques y filas */
+.bloque{padding-top:34px}
+.bl-cab{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:14px}
+.bl-cab h2{font-size:clamp(24px,3.4vw,34px);font-weight:500}
+.bl-cab a{font-size:14.5px;font-weight:600;color:var(--flor);text-decoration:none;white-space:nowrap}
+.fh{position:relative}
+.hscroll{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;margin:0 -4vw;padding:4px 4vw 10px;scroll-behavior:smooth}
+.hscroll::-webkit-scrollbar{display:none}
+.hscroll .pc{flex:0 0 min(46vw,215px);scroll-snap-align:start}
+@media(min-width:901px){.hscroll{margin:0;padding:4px 2px 10px}.hscroll .pc{flex-basis:226px}.fh .fl{display:grid;place-items:center}}
+/* tarjeta de producto */
+.pc{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--linea);border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .3s,box-shadow .3s,border-color .3s}
+.pc:hover{transform:translateY(-4px);box-shadow:0 22px 36px -26px rgba(43,24,34,.55);border-color:#dcc8cc}
+.pf{position:relative;aspect-ratio:1/1;background:#faf6f5;overflow:hidden}
+.pf img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.pc:hover .pf img{transform:scale(1.05)}
+.pt{position:absolute;left:10px;top:10px;background:rgba(255,255,255,.95);font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:999px;color:var(--suave)}
+.pb{padding:12px 14px 16px;display:flex;flex-direction:column;gap:5px;flex:1}
+.pn{font-size:14.5px;line-height:1.3;color:var(--tinta);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
+.pp{font:600 22px/1.1 'DM Sans',sans-serif;letter-spacing:-.02em;margin-top:4px}
+.pp sup{font-size:.5em;font-weight:600;vertical-align:top;position:relative;top:.15em;margin-left:1px}
+.pe{font-size:12.5px;color:var(--suave);margin-top:auto;padding-top:4px}
+.pe .st{color:var(--flor)}
+.pe b{color:var(--tinta);font-weight:600}
+/* tienda con filtros */
+.tienda{display:grid;gap:14px;grid-template-columns:minmax(0,1fr)}.tienda>*,.tfil>*{min-width:0}
+.tfil{display:grid;gap:10px;grid-template-columns:minmax(0,1fr)}
+.tfil .gr{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}
+.tfil .gr::-webkit-scrollbar{display:none}
+.tfil h4{display:none}
+.pill{flex:none;border:1.3px solid var(--linea);background:#fff;color:var(--tinta);font:500 14px 'DM Sans',sans-serif;padding:9px 16px;border-radius:999px;cursor:pointer;transition:.2s;white-space:nowrap}
 .pill:hover{border-color:var(--flor)}
-.pill[aria-pressed=true]{background:var(--tinta);border-color:var(--tinta);color:var(--perla)}
-#fCat .pill{background:transparent}#fCat .pill[aria-pressed=true]{background:var(--flor);border-color:var(--flor);color:#fff}
-.fin{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:15px;color:var(--suave)}
-.ord select{font:500 15px 'Hanken Grotesk',sans-serif;color:var(--tinta);background:#fff;border:1.2px solid var(--plata);border-radius:999px;padding:8px 14px;margin-left:6px}
-.todos{padding:0;max-width:none}
-.todos .tarj{animation:aparece .5s cubic-bezier(.2,.7,.2,1) both;transition:transform .35s,box-shadow .35s}
-.todos .tarj:hover{transform:translateY(-4px);box-shadow:0 26px 40px -30px rgba(43,24,34,.5)}
-@keyframes aparece{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.tarj .ph .tipo{position:absolute;left:10px;top:10px;z-index:2;background:rgba(248,242,241,.94);font-size:12.5px;font-weight:600;padding:5px 11px;border-radius:999px;color:var(--suave)}
-.vacio{grid-column:1/-1;text-align:center;padding:50px 10px;color:var(--suave)}
-.vacio button{margin-top:16px}
-.pasos{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:n}
-.pasos li{border-top:1px solid var(--plata);padding-top:22px}
-.pasos b{display:block;font-size:64px;font-weight:300;font-style:italic;color:var(--flor);line-height:1}
-.pasos h3{font:500 28px/1.1 'Cormorant Garamond',serif;margin:12px 0 8px}
-.pasos p{color:var(--suave);font-size:16px;max-width:26em}
-footer{margin-top:10vh;border-top:1px solid var(--plata)}
-@media(min-width:1100px){
-  .navlinks{display:flex;gap:4px;margin-left:auto;margin-right:8px}
-  .navlinks a{font-size:14.5px;text-decoration:none;color:var(--suave);padding:8px 11px;border-radius:999px;transition:.2s;white-space:nowrap}
-  .navlinks a:hover{color:var(--tinta);background:var(--rubor)}
-  .navlinks a.on{color:var(--flor);font-weight:600}
-  .burger{display:none}
+.pill[aria-pressed=true]{background:var(--tinta);border-color:var(--tinta);color:#fff}
+.pill small{opacity:.6;margin-left:6px;font-size:12px}
+.tbar{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14px;color:var(--suave)}
+.tbar select{font:500 14px 'DM Sans',sans-serif;color:var(--tinta);background:#fff;border:1.3px solid var(--linea);border-radius:999px;padding:8px 14px}
+.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tgrid .pc{animation:aparece .45s cubic-bezier(.2,.7,.2,1) both}
+@keyframes aparece{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.vacio{grid-column:1/-1;text-align:center;padding:46px 10px;color:var(--suave)}
+.vacio button{margin-top:14px;background:var(--tinta);color:#fff;border:0;border-radius:999px;padding:12px 22px;font:600 15px 'DM Sans',sans-serif;cursor:pointer}
+@media(min-width:901px){
+  .tienda{grid-template-columns:230px minmax(0,1fr);gap:34px;align-items:start}
+  .tfil{position:sticky;top:calc(var(--hh) + 18px);gap:22px}
+  .tfil h4{display:block;font:600 14px 'DM Sans',sans-serif;margin-bottom:8px}
+  .tfil .gr{flex-direction:column;gap:2px;overflow:visible}
+  .tfil .pill{border:0;background:none;text-align:left;padding:7px 10px;border-radius:10px;font-size:14.5px;color:var(--suave)}
+  .tfil .pill:hover{background:#fff;color:var(--tinta)}
+  .tfil .pill[aria-pressed=true]{background:var(--rubor);color:var(--flor);font-weight:600}
+  .tgrid{grid-template-columns:repeat(3,1fr);gap:18px}
+  .tbar{grid-column:2;grid-row:1}
 }
-@media(max-width:900px){
-  .p2{grid-template-columns:1fr;min-height:0;padding-top:4vh;gap:34px}
-  .p2-arcos{height:min(84vw,340px);min-height:0}
-  .cats2{grid-template-columns:1fr 1fr;gap:12px}
-  .cat2:first-child{aspect-ratio:2/1.1}
-  .cat2 div{left:14px;right:14px;bottom:12px;flex-direction:column;align-items:flex-start;gap:2px}
-  .pasos{grid-template-columns:1fr;gap:22px}
-  .p2 h1{font-size:clamp(54px,15vw,90px)}
-}
-@media(max-width:520px){.cat2:first-child h3{font-size:36px}.p2-datos b{font-size:30px}}
+@media(min-width:1180px){.tgrid{grid-template-columns:repeat(4,1fr)}}
+.tienda .tcol{display:grid;gap:14px}
+/* pasos */
+.pasos{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pasos li{display:flex;gap:14px;background:#fff;border:1px solid var(--linea);border-radius:18px;padding:18px}
+.pasos b{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--rubor);color:var(--flor);font:600 16px 'DM Sans',sans-serif}
+.pasos h3{font:600 16px/1.2 'DM Sans',sans-serif;margin-bottom:4px}
+.pasos p{font-size:14px;color:var(--suave)}
+@media(max-width:800px){.pasos{grid-template-columns:1fr}}
+/* listado */
+.migas{font-size:13.5px;color:var(--suave);padding:6px 0 0}
+.migas a{color:var(--suave)}
+.cab2{padding:10px 0 20px}
+.cab2 h1{font-size:clamp(30px,5vw,50px);font-weight:500}
+.cab2 h1 em{font-style:italic;color:var(--flor)}
+.cab2 .sub{color:var(--suave);margin-top:8px;max-width:36em}
+.vista .nota-p{padding:26px 0 10px;max-width:none}
+footer{margin-top:50px;border-top:1px solid var(--linea);padding:34px 4vw 40px}
+.pie-marca{font:500 24px 'Playfair Display',serif;margin-bottom:10px}.pie-marca i{color:var(--flor)}
+.rel{padding-top:10px}
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   .encuentro{height:auto}.pin{position:static;height:auto;padding:10vh 0}.escena{height:60vh}
@@ -345,8 +397,12 @@ footer{margin-top:10vh;border-top:1px solid var(--plata)}
 <body>
 
 <header class="top">
-  <a class="marca" href="#/">Nuestro detalle</a>
-  <nav class="navlinks" id="navlinks" aria-label="Categorías"></nav>
+  <a class="marca" href="#/">Nuestro <i>detalle</i></a>
+  <form class="busca" id="busca" role="search" autocomplete="off">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Buscar anillos, pulseras, tazas…" aria-label="Buscar regalos" enterkeyhint="search">
+    <div class="sug" id="sug" hidden></div>
+  </form>
   <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
 </header>
 <nav class="drawer" id="drawer" aria-label="Categorías">
@@ -364,53 +420,34 @@ footer{margin-top:10vh;border-top:1px solid var(--plata)}
 
 <main>
 <div class="vista" id="v-inicio" hidden>
-  <section class="p2">
-    <div class="p2-txt">
-      <h1 class="serif">Un detalle<br><i>para los dos.</i></h1>
-      <p class="p2-sub">Anillos, pulseras, collares y más regalos para quien te hace feliz. Elegís, mirás el detalle y comprás directo en Mercado Libre.</p>
-      <div class="p2-cta"><button class="cta" type="button" data-ir="regalos">Elegir un regalo</button><button class="ghost" type="button" data-ir="como">Cómo funciona</button></div>
-      <ul class="p2-datos" id="p2datos"></ul>
-    </div>
-    <div class="p2-arcos" id="arcos" aria-hidden="true">
-      <div class="arco a1"><img src="img/hero.jpg" alt=""></div>
-      <div class="arco a2"><img src="img/nudo-3.jpg" alt=""></div>
-      <div class="arco a3"><img src="img/llavero-grabado-3.jpg" alt=""></div>
-    </div>
-  </section>
-
-  <section class="sec" id="categorias">
-    <div class="sec-cab"><h2 class="serif">Elegí por <i>categoría</i></h2></div>
-    <div class="cats2" id="cats"></div>
-  </section>
-
-  <section class="sec sec-reg" id="regalos">
-    <div class="sec-cab"><h2 class="serif">Encontrá <i>tu regalo</i></h2><p class="sec-sub">Filtrá por presupuesto o por tipo de regalo.</p></div>
-    <div class="filtros" id="filtros">
-      <div class="fila" role="group" aria-label="Presupuesto" id="fPres"></div>
-      <div class="fila" role="group" aria-label="Categoría" id="fCat"></div>
-      <div class="fin"><span id="fCuenta" aria-live="polite"></span><label class="ord">Ordenar <select id="fOrden"><option value="rel">Sugeridos</option><option value="menor">Menor precio</option><option value="mayor">Mayor precio</option></select></label></div>
-    </div>
-    <div class="grilla todos" id="todos"></div>
-  </section>
-
-  <section class="sec" id="como">
-    <div class="sec-cab"><h2 class="serif">Cómo <i>funciona</i></h2></div>
-    <ol class="pasos">
-      <li><b class="serif">1</b><h3>Elegís</h3><p>Mirá las categorías o filtrá por presupuesto hasta dar con el regalo.</p></li>
-      <li><b class="serif">2</b><h3>Mirás el detalle</h3><p>Fotos, qué incluye, opiniones y ventas de la publicación original.</p></li>
-      <li><b class="serif">3</b><h3>Comprás en Mercado Libre</h3><p>Pagás y recibís dentro de Mercado Libre, con su compra protegida.</p></li>
-    </ol>
-  </section>
+  <div class="cont">
+    <nav class="cinta" id="cinta" aria-label="Categorías"></nav>
+    <section class="banner" aria-label="Destacados">
+      <div class="slides" id="slides"></div>
+      <button class="fl izq" type="button" aria-label="Anterior" data-sl="-1">‹</button>
+      <button class="fl der" type="button" aria-label="Siguiente" data-sl="1">›</button>
+      <div class="dots" id="dots"></div>
+    </section>
+    <ul class="confianza" id="confianza"></ul>
+    <div id="filas"></div>
+    <section class="bloque" id="todos-los"><div class="bl-cab"><h2 class="serif">Todos los regalos</h2></div><div id="tiendaHome"></div></section>
+    <section class="bloque" id="como"><div class="bl-cab"><h2 class="serif">Cómo comprar</h2></div>
+      <ol class="pasos">
+        <li><b>1</b><div><h3>Elegís</h3><p>Buscá, filtrá por presupuesto o entrá a una categoría.</p></div></li>
+        <li><b>2</b><div><h3>Mirás el detalle</h3><p>Fotos, qué incluye, opiniones y ventas de la publicación.</p></div></li>
+        <li><b>3</b><div><h3>Comprás en Mercado Libre</h3><p>Pagás y recibís dentro de Mercado Libre, con su compra protegida.</p></div></li>
+      </ol>
+    </section>
+  </div>
 </div>
 
 <div class="vista" id="v-lista" hidden>
-  <div class="cab">
-    <a class="atras" href="#/">Inicio</a>
-    <h1 class="serif" id="listaTitulo"></h1>
-    <p class="sub" id="listaSub"></p>
+  <div class="cont">
+    <p class="migas"><a href="#/">Inicio</a> <span id="migaTxt"></span></p>
+    <div class="cab2"><h1 class="serif" id="listaTitulo"></h1><p class="sub" id="listaSub"></p></div>
+    <div id="tiendaLista"></div>
+    <p class="nota-p">Las estrellas y las ventas son las que muestra cada publicación en Mercado Libre. Los precios son los de la última revisión (25/11): confirmalos en la publicación antes de pagar.</p>
   </div>
-  <div class="grilla" id="grilla"></div>
-  <p class="nota-p">Las estrellas y las ventas son las que muestra cada publicación en Mercado Libre. Los precios son los de la última revisión (25/11): confirmalos en la publicación antes de pagar.</p>
 </div>
 
 <div class="vista" id="v-det" hidden></div>
@@ -549,7 +586,7 @@ footer{margin-top:10vh;border-top:1px solid var(--plata)}
 </main>
 
 <footer>
-  <div class="wrap"><p class="legal">Esta página es independiente y no pertenece a Mercado Libre. Si comprás desde el botón, puedo recibir una comisión sin costo extra para vos. El precio, el stock y el envío los define el vendedor y pueden cambiar: confirmá los datos finales en Mercado Libre antes de pagar.</p></div>
+  <div class="wrap"><div class="pie-marca">Nuestro <i>detalle</i></div><p class="legal">Esta página es independiente y no pertenece a Mercado Libre. Si comprás desde el botón, puedo recibir una comisión sin costo extra para vos. El precio, el stock y el envío los define el vendedor y pueden cambiar: confirmá los datos finales en Mercado Libre antes de pagar.</p></div>
 </footer>
 
 <div class="barra" id="barra">
@@ -634,55 +671,89 @@ function precioDe(p){if(p.id==='flor')return FLOR_PRECIO;return(PRECIOS&&PRECIOS
 function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
 function buscar(c,id){var l=CATS[c];if(!l)return null;for(var i=0;i<l.items.length;i++)if(l.items[i].id===id)return l.items[i];return null}
 
-var PRES=[['todos','Todos',0,1e12],['a','Hasta $15.000',0,15000],['b','De $15.000 a $35.000',15000,35000],['c','Más de $35.000',35000,1e12]];
-var fil={pres:'todos',cat:'todas',orden:'rel'};
+var PRES=[['todos','Todos los precios',0,1e12],['a','Hasta $15.000',0,15000],['b','De $15.000 a $35.000',15000,35000],['c','Más de $35.000',35000,1e12]];
 function listaTodos(){var r=[];Object.keys(CATS).forEach(function(k){CATS[k].items.forEach(function(p){r.push({k:k,p:p})})});return r}
-function tarjeta(k,p,i){
-  return '<a class="tarj" style="animation-delay:'+Math.min(i,12)*35+'ms" href="#/'+k+'/'+p.id+'"><div class="ph" role="img" aria-label="'+esc(p.nombre)+'"><span class="tipo">'+CATS[k].nombre+'</span><img src="'+p.fotos[0]+'" alt="'+esc(p.nombre)+'" loading="lazy"></div>'+
-   '<div class="cuerpo"><h3>'+esc(p.nombre)+'</h3><p>'+esc(p.txt)+'</p>'+
-   '<div class="est">'+(p.estr?'<span class="st" aria-hidden="true">★</span> <b>'+p.estr+'</b> · '+p.op+' · ':'')+p.vend+'</div>'+
-   '<div class="pie"><div class="pr">'+cat$(precioDe(p))+'</div><span class="cta btn">Ver detalle</span></div></div></a>';
+function ventas(p){var m=String(p.vend).match(/(\d+)/);return m?parseInt(m[1],10):0}
+function norm(t){return String(t).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
+function coincide(x,q){var h=norm([x.p.nombre,x.p.txt,x.p.tag||'',CATS[x.k].nombre].join(' '));return norm(q).split(/\s+/).filter(Boolean).every(function(w){return h.indexOf(w)>-1})}
+function pc(x,i){var p=x.p,k=x.k,pr=precioDe(p),e=Math.floor(pr),c=Math.round((pr-e)*100);
+  return '<a class="pc" style="animation-delay:'+Math.min(i||0,10)*30+'ms" href="#/'+k+'/'+p.id+'"><div class="pf"><span class="pt">'+CATS[k].nombre+'</span><img src="'+p.fotos[0]+'" alt="'+esc(p.nombre)+'" loading="lazy"></div>'+
+   '<div class="pb"><p class="pn">'+esc(p.nombre)+'</p><div class="pp">$ '+fmt(e)+(c?'<sup>'+String(c).padStart(2,'0')+'</sup>':'')+'</div>'+
+   '<div class="pe">'+(p.estr?'<span class="st" aria-hidden="true">★</span> <b>'+p.estr+'</b> · ':'')+p.vend+'</div></div></a>'}
+function crearTienda(rootId,opt){
+  var root=document.getElementById(rootId),st={pres:'todos',cat:opt.cat||'todas',orden:'rel'};
+  var base=listaTodos().filter(function(x){return(!opt.cat||x.k===opt.cat)&&(!opt.q||coincide(x,opt.q))});
+  var ks=Object.keys(CATS).filter(function(k){return base.some(function(x){return x.k===k})});
+  root.innerHTML='<div class="tienda"><aside class="tfil">'+
+    '<div><h4>Precio</h4><div class="gr" data-g="pres">'+PRES.map(function(x){return '<button type="button" class="pill" data-v="'+x[0]+'" aria-pressed="false">'+x[1]+'</button>'}).join('')+'</div></div>'+
+    (opt.cat?'':'<div><h4>Categoría</h4><div class="gr" data-g="cat"><button type="button" class="pill" data-v="todas" aria-pressed="true">Todas</button>'+ks.map(function(k){return '<button type="button" class="pill" data-v="'+k+'" aria-pressed="false">'+CATS[k].nombre+'<small>'+base.filter(function(x){return x.k===k}).length+'</small></button>'}).join('')+'</div></div>')+
+    '</aside><div class="tbar"><span class="cuenta" aria-live="polite"></span><label>Ordenar <select class="orden"><option value="rel">Más relevantes</option><option value="menor">Menor precio</option><option value="mayor">Mayor precio</option><option value="vend">Más vendidos</option></select></label></div><div class="tgrid"></div></div>';
+  function dibujar(){
+    var b=PRES.filter(function(x){return x[0]===st.pres})[0];
+    var r=base.filter(function(x){var pr=precioDe(x.p);return pr>b[2]&&pr<=b[3]||(b[2]===0&&pr<=b[3])}).filter(function(x){return st.cat==='todas'||x.k===st.cat});
+    if(st.orden==='menor')r.sort(function(a,c){return precioDe(a.p)-precioDe(c.p)});
+    if(st.orden==='mayor')r.sort(function(a,c){return precioDe(c.p)-precioDe(a.p)});
+    if(st.orden==='vend')r.sort(function(a,c){return ventas(c.p)-ventas(a.p)});
+    root.querySelector('.cuenta').textContent=r.length+(r.length===1?' resultado':' resultados');
+    root.querySelector('.tgrid').innerHTML=r.length?r.map(pc).join(''):'<div class="vacio"><p>No encontramos regalos con esos filtros.</p><button type="button" data-limpia>Quitar filtros</button></div>';
+    root.querySelectorAll('[data-g=pres] .pill').forEach(function(p){p.setAttribute('aria-pressed',p.dataset.v===st.pres)});
+    root.querySelectorAll('[data-g=cat] .pill').forEach(function(p){p.setAttribute('aria-pressed',p.dataset.v===st.cat)});
+  }
+  root.onclick=function(e){var p=e.target.closest('.pill');if(p){if(p.parentNode.dataset.g==='pres')st.pres=p.dataset.v;else st.cat=p.dataset.v;dibujar();return}
+    if(e.target.closest('[data-limpia]')){st.pres='todos';st.cat=opt.cat||'todas';dibujar()}};
+  root.querySelector('.orden').onchange=function(e){st.orden=e.target.value;dibujar()};
+  root._set=function(o){for(var k in o)st[k]=o[k];dibujar()};
+  dibujar();
 }
-function pintarTodos(){
-  var b=PRES.filter(function(x){return x[0]===fil.pres})[0];
-  var r=listaTodos().filter(function(x){var pr=precioDe(x.p);return pr>b[2]&&pr<=b[3]||(b[2]===0&&pr<=b[3])}).filter(function(x){return fil.cat==='todas'||x.k===fil.cat});
-  if(fil.orden==='menor')r.sort(function(a,c){return precioDe(a.p)-precioDe(c.p)});
-  if(fil.orden==='mayor')r.sort(function(a,c){return precioDe(c.p)-precioDe(a.p)});
-  document.getElementById('fCuenta').textContent=r.length+(r.length===1?' regalo':' regalos');
-  document.getElementById('todos').innerHTML=r.length?r.map(function(x,i){return tarjeta(x.k,x.p,i)}).join(''):'<div class="vacio"><p>No hay regalos con ese presupuesto en esta categoría.</p><button class="ghost" type="button" id="fLimpiar">Ver todos los regalos</button></div>';
-  document.querySelectorAll('#fPres .pill').forEach(function(p){p.setAttribute('aria-pressed',p.dataset.v===fil.pres)});
-  document.querySelectorAll('#fCat .pill').forEach(function(p){p.setAttribute('aria-pressed',p.dataset.v===fil.cat)});
-}
+function filaH(titulo,items,href){
+  return '<section class="bloque"><div class="bl-cab"><h2 class="serif">'+titulo+'</h2>'+(href?'<a href="'+href+'">Ver todo</a>':'')+'</div><div class="fh"><button class="fl izq" type="button" aria-label="Anterior" data-h="-1">‹</button><div class="hscroll">'+items.map(pc).join('')+'</div><button class="fl der" type="button" aria-label="Siguiente" data-h="1">›</button></div></section>'}
+function minPrecio(arr){return Math.min.apply(null,arr.map(function(x){return precioDe(x.p)}))}
+var slideTimer=null;
 function pintarInicio(){
-  var ks=Object.keys(CATS),total=listaTodos().length;
+  var ks=Object.keys(CATS),todos=listaTodos();
   ks.forEach(function(k){var el=document.querySelector('#drawer [data-n="'+k+'"]');if(el)el.textContent=CATS[k].items.length+' '+CATS[k].unidad});
-  document.getElementById('navlinks').innerHTML=ks.map(function(k){return '<a href="#/'+k+'" data-r="'+k+'">'+CATS[k].nombre+'</a>'}).join('');
-  document.getElementById('p2datos').innerHTML='<li><b>'+total+'</b>regalos elegidos</li><li><b>'+ks.length+'</b>categorías</li><li><b>ML</b>pagás y recibís en Mercado Libre</li>';
-  document.getElementById('cats').innerHTML=ks.map(function(k){var c=CATS[k];
-    return '<a class="cat2" href="#/'+k+'"><img src="'+c.foto+'" alt="" loading="lazy"><div><h3>'+c.nombre+'</h3><span>'+c.items.length+' '+c.unidad+'</span></div></a>'}).join('');
-  document.getElementById('fPres').innerHTML=PRES.map(function(x){return '<button type="button" class="pill" data-v="'+x[0]+'" aria-pressed="false">'+x[1]+'</button>'}).join('');
-  document.getElementById('fCat').innerHTML='<button type="button" class="pill" data-v="todas" aria-pressed="true">Todas</button>'+ks.map(function(k){return '<button type="button" class="pill" data-v="'+k+'" aria-pressed="false">'+CATS[k].nombre+'</button>'}).join('');
-  pintarTodos();
+  document.getElementById('cinta').innerHTML=ks.map(function(k){return '<a href="#/'+k+'"><span class="cfoto"><img src="'+CATS[k].foto+'" alt="" loading="lazy"></span>'+CATS[k].nombre+'</a>'}).join('');
+  var baratos=todos.filter(function(x){return precioDe(x.p)<=15000}),minA=minPrecio(todos.filter(function(x){return x.k==='anillos'}));
+  var sl=[['s1','Anillos de promesa','Sets de a dos desde $ '+fmt(minA)+'. Uno para cada uno.','Ver anillos','#/anillos','img/hero.jpg'],
+    ['s2','Regalos hasta $15.000','Llaveros, collares, anillos y más: '+baratos.length+' ideas para sorprender sin gastar de más.','Ver ideas','#/?pres=a','img/llavero-corazon-2.jpg'],
+    ['s3','Cajas para sorprender','Un juego de pistas o una lata con una sorpresa por cada sentido.','Ver cajas','#/cajas','img/caja-tesoro-1.jpg']];
+  document.getElementById('slides').innerHTML=sl.map(function(x,i){return '<a class="slide '+x[0]+(i?'':' on')+'" href="'+x[4]+'" data-pres="'+(x[4].indexOf('pres=a')>-1?'a':'')+'"><div class="tx"><h2>'+x[1]+'</h2><p>'+x[2]+'</p><span class="bt">'+x[3]+'</span></div><div class="im"><img src="'+x[5]+'" alt=""></div></a>'}).join('');
+  document.getElementById('dots').innerHTML=sl.map(function(x,i){return '<i data-i="'+i+'" class="'+(i?'':'on')+'"></i>'}).join('');
+  document.getElementById('confianza').innerHTML=
+   '<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><b>Comprás en Mercado Libre</b>Pagás y recibís dentro de la plataforma.</div></li>'+
+   '<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><div><b>Opiniones y ventas reales</b>Las que muestra cada publicación.</div></li>'+
+   '<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M12 8v12M3 13h18M12 8c-2-4-6-4-6-1.5S10 8 12 8zm0 0c2-4 6-4 6-1.5S14 8 12 8z"/></svg><div><b>Para todos los bolsillos</b>Regalos desde $ '+fmt(minPrecio(todos))+'.</div></li>';
+  var mas=todos.slice().sort(function(a,c){return ventas(c.p)-ventas(a.p)}).slice(0,8);
+  document.getElementById('filas').innerHTML=filaH('Los más vendidos',mas,'')+filaH('Hasta $15.000',baratos.sort(function(a,c){return precioDe(a.p)-precioDe(c.p)}),'#/?pres=a');
+  crearTienda('tiendaHome',{});
+  clearInterval(slideTimer);
+  slideTimer=setInterval(function(){var s=document.getElementById('slides');if(!s||s.offsetParent===null||document.hidden||s.matches(':hover'))return;var i=Math.round(s.scrollLeft/s.clientWidth);irSlide((i+1)%sl.length)},5800);
+}
+function irSlide(i){var s=document.getElementById('slides');s.scrollTo({left:i*s.clientWidth,behavior:'smooth'})}
+function pintarLista(k,q){
+  var c=CATS[k];
+  if(q!==undefined){document.getElementById('listaTitulo').innerHTML='Resultados para <em>'+esc(q)+'</em>';document.getElementById('listaSub').textContent='';document.getElementById('migaTxt').textContent='› Búsqueda';crearTienda('tiendaLista',{q:q});return}
+  document.getElementById('listaTitulo').innerHTML=c.titulo;document.getElementById('listaSub').textContent=c.sub;document.getElementById('migaTxt').textContent='› '+c.nombre;
+  crearTienda('tiendaLista',{cat:k});
 }
 (function(){
-  var f=document.getElementById('filtros');
-  f.addEventListener('click',function(e){var p=e.target.closest('.pill');if(!p)return;if(p.parentNode.id==='fPres')fil.pres=p.dataset.v;else fil.cat=p.dataset.v;pintarTodos()});
-  document.getElementById('fOrden').addEventListener('change',function(e){fil.orden=e.target.value;pintarTodos()});
-  document.getElementById('todos').addEventListener('click',function(e){if(e.target.id==='fLimpiar'){fil.pres='todos';fil.cat='todas';pintarTodos()}});
-  document.querySelectorAll('[data-ir]').forEach(function(b){b.addEventListener('click',function(){var t=document.getElementById(b.dataset.ir);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
-  var ar=document.getElementById('arcos'),tick=false;
-  addEventListener('scroll',function(){if(tick)return;tick=true;requestAnimationFrame(function(){tick=false;if(scrollY<1400)ar.style.setProperty('--py',scrollY*.08)})},{passive:true});
+  var sl=document.getElementById('slides'),dots=document.getElementById('dots');
+  sl.addEventListener('scroll',function(){var i=Math.round(sl.scrollLeft/sl.clientWidth);dots.querySelectorAll('i').forEach(function(d,j){d.classList.toggle('on',j===i)});sl.querySelectorAll('.slide').forEach(function(d,j){d.classList.toggle('on',j===i)})},{passive:true});
+  dots.addEventListener('click',function(e){var d=e.target.closest('i');if(d)irSlide(+d.dataset.i)});
+  document.querySelectorAll('[data-sl]').forEach(function(b){b.onclick=function(){var n=sl.children.length,i=Math.round(sl.scrollLeft/sl.clientWidth);irSlide((i+ +b.dataset.sl+n)%n)}});
+  document.addEventListener('click',function(e){var h=e.target.closest('[data-h]');if(h){var sc=h.parentNode.querySelector('.hscroll');sc.scrollBy({left:h.dataset.h*sc.clientWidth*.8,behavior:'smooth'})}});
+  document.getElementById('v-inicio').addEventListener('click',function(e){
+    var a=e.target.closest('a[data-pres="a"],a[href="#/?pres=a"]');if(a){e.preventDefault();var r=document.getElementById('tiendaHome');r._set({pres:'a'});document.getElementById('todos-los').scrollIntoView({behavior:'smooth'})}});
+  /* buscador */
+  var q=document.getElementById('q'),sug=document.getElementById('sug'),f=document.getElementById('busca');
+  function ver(){var t=q.value.trim();if(t.length<2){sug.hidden=true;return}
+    var r=listaTodos().filter(function(x){return coincide(x,t)});
+    sug.innerHTML=r.slice(0,5).map(function(x){return '<a href="#/'+x.k+'/'+x.p.id+'"><img src="'+x.p.fotos[0]+'" alt=""><span>'+esc(x.p.nombre)+'</span><b>$ '+fmt(precioDe(x.p))+'</b></a>'}).join('')+(r.length?'<a class="todo" href="#/buscar/'+encodeURIComponent(t)+'">Ver los '+r.length+' resultados</a>':'<span class="todo" style="color:var(--suave);font-weight:400">No encontramos "'+esc(t)+'". Probá con otra palabra.</span>');
+    sug.hidden=false}
+  q.addEventListener('input',ver);q.addEventListener('focus',ver);
+  document.addEventListener('click',function(e){if(!f.contains(e.target))sug.hidden=true});
+  f.addEventListener('submit',function(e){e.preventDefault();var t=q.value.trim();if(t){location.hash='#/buscar/'+encodeURIComponent(t);sug.hidden=true;q.blur()}});
 })();
-function pintarLista(k){
-  var c=CATS[k];
-  document.getElementById('listaTitulo').innerHTML=c.titulo;
-  document.getElementById('listaSub').textContent=c.sub;
-  document.getElementById('grilla').innerHTML=c.items.map(function(p){
-    return '<a class="tarj" href="#/'+k+'/'+p.id+'"><div class="ph" role="img" aria-label="'+esc(p.nombre)+'"><img src="'+p.fotos[0]+'" alt="'+esc(p.nombre)+'" loading="lazy"></div>'+
-     '<div class="cuerpo"><h3>'+esc(p.nombre)+'</h3><p>'+esc(p.txt)+'</p>'+
-     '<div class="est">'+(p.estr?'<span class="st" aria-hidden="true">★</span> <b>'+p.estr+'</b> · '+p.op+' · ':'')+p.vend+'</div>'+
-     '<div class="pie"><div class="pr">'+cat$(precioDe(p))+'</div><span class="cta btn">Ver detalle</span></div></div></a>'}).join('');
-}
 var SVG_FLECHA='<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>';
 function pintarDetalle(k,p){
   var pr=precioDe(p),e=Math.floor(pr),c=Math.round((pr-e)*100),sup=c?'<sup>'+String(c).padStart(2,'0')+'</sup>':'';
@@ -704,6 +775,7 @@ function pintarDetalle(k,p){
   '<section class="seccion final"><div class="wrap"><span class="serif chico">hoy, para los dos</span><div class="monto">$ '+fmt(e)+sup+'</div><p class="nota">Precio publicado en Mercado Libre</p><a class="cta grande" href="'+p.link+'" target="_blank" rel="noopener sponsored">Comprar en Mercado Libre '+SVG_FLECHA+'</a>'+
   '<div class="datos"><div><b>'+p.vend.replace(' vendidos','').replace(' vendido','')+'</b><span>'+(/^\d|^\+/.test(p.vend)?'vendidos':'en Mercado Libre')+'</span></div>'+(p.estr?'<div><b>'+p.estr+' de 5</b><span>'+p.op+'</span></div>':'')+'</div></div></section>'+
   '<section class="seccion"><div class="wrap"><div class="titulo"><h2 class="serif">Antes de <em>decidir</em></h2></div><div class="faq">'+faq+'</div></div></section>'+
+  '<section class="seccion rel"><div class="wrap">'+filaH('También te puede gustar',listaTodos().filter(function(x){return x.p.id!==p.id}).sort(function(a,c){return (c.k===k)-(a.k===k)||Math.abs(precioDe(a.p)-pr)-Math.abs(precioDe(c.p)-pr)}).slice(0,8),'#/'+k)+'</div></section>'+
   '<div class="volver"><a class="cta" href="#/'+k+'">Ver todos: '+CATS[k].nombre.toLowerCase()+'</a></div>';
   var foto=document.getElementById('gfoto'),mini=document.getElementById('gmini');
   if(p.fotos.length>1)p.fotos.forEach(function(f,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ver foto '+(i+1));if(i===0)b.className='on';
@@ -727,15 +799,15 @@ addEventListener('scroll',function(){if(barraItem)document.getElementById('barra
 /* rutas: #/  #/anillos  #/anillos/flor */
 var TITULO0='Nuestro detalle · Regalos para la pareja';
 function ruta(){
-  var h=location.hash.replace(/^#\/?/,'').split('/'),cat=h[0],id=h[1];
+  var h=location.hash.replace(/^#\/?/,'').split('/'),cat=h[0],id=h[1];if(cat==='buscar'){var vs0=['inicio','lista','det','flor'];vs0.forEach(function(v){document.getElementById('v-'+v).hidden=(v!=='lista')});pintarLista(null,decodeURIComponent(id||''));barra(null);document.title='Nuestro detalle · Búsqueda';document.querySelectorAll('#drawer a').forEach(function(a){a.classList.remove('on')});cerrarMenu();scrollTo(0,0);return}
   var vs=['inicio','lista','det','flor'];
   function ver(n){vs.forEach(function(v){document.getElementById('v-'+v).hidden=(v!==n)})}
-  var item=cat&&id?buscar(cat,id):null,activo='inicio';
+  var item=cat&&id?buscar(cat,id):null,activo='inicio';if(cat.indexOf('?')>-1)cat='';
   if(item&&item.id==='flor'){ver('flor');activo=cat;barra(item);document.title='Nuestro detalle · '+item.nombre}
   else if(item){pintarDetalle(cat,item);ver('det');activo=cat;barra(item);document.title='Nuestro detalle · '+item.nombre}
   else if(CATS[cat]){pintarLista(cat);ver('lista');activo=cat;barra(null);document.title='Nuestro detalle · '+CATS[cat].nombre+' para la pareja'}
   else{ver('inicio');barra(null);document.title=TITULO0}
-  document.querySelectorAll('#drawer a,#navlinks a').forEach(function(a){a.classList.toggle('on',a.dataset.r===activo)});
+  document.querySelectorAll('#drawer a').forEach(function(a){a.classList.toggle('on',a.dataset.r===activo)});
   cerrarMenu();scrollTo(0,0);dispatchEvent(new Event('resize'));
 }
 function cerrarMenu(){document.getElementById('drawer').classList.remove('on');var b=document.getElementById('burger');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Abrir menú')}
