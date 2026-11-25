@@ -1,0 +1,28 @@
+name: Actualizar precio
+
+on:
+  schedule:
+    - cron: '0 11 * * 1'   # lunes 8:00 hora Argentina
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  precio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/actualizar-precio.mjs
+      - name: Guardar si cambió
+        run: |
+          if [ -n "$(git status --porcelain precio.json)" ]; then
+            git config user.name "precio-bot"
+            git config user.email "precio-bot@users.noreply.github.com"
+            git add precio.json
+            git commit -m "Actualiza precio"
+            git push
+          fi

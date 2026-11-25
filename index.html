@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nuestro detalle · Anillos de promesa para parejas</title>
+<meta name="description" content="Set de dos anillos de promesa para parejas: uno con flor de cerezo, otro con rama. Ajustables, hechos a mano. Comprá en Mercado Libre.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --perla:#f8f2f1;      /* fondo, sacado de la foto */
+  --rubor:#f3dfe2;      /* paneles */
+  --flor:#c23a68;       /* rosa del esmalte: botón y acentos */
+  --flor-hondo:#a02c54;
+  --tinta:#2b1822;      /* negro ciruela, como la rama */
+  --suave:#6f5b66;
+  --plata:#bdb4ba;      /* líneas finas */
+  --d:min(44vw,38vh);
+  --cf:2.1;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',system-ui,sans-serif;background:var(--perla);color:var(--tinta);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--flor);outline-offset:3px;border-radius:6px}
+.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;letter-spacing:-.01em;line-height:1.02;text-wrap:balance}
+.wrap{max-width:1180px;margin:0 auto;padding:0 6vw}
+.linea{height:1px;background:var(--plata);opacity:.7;border:0}
+
+/* botón */
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;background:var(--flor);color:#fff;font-weight:600;font-size:17px;padding:18px 34px;border-radius:999px;transition:transform .25s,background .25s;box-shadow:0 18px 34px -18px rgba(194,58,104,.8)}
+.cta:hover{transform:translateY(-2px);background:var(--flor-hondo)}
+.cta svg{width:18px;height:18px;transition:transform .25s}
+.cta:hover svg{transform:translateX(4px)}
+.cta.grande{font-size:18px;padding:20px 40px;white-space:nowrap}
+
+/* barra de escritorio */
+.nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 6vw;background:rgba(248,242,241,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(189,180,186,.5);transform:translateY(-110%);transition:transform .4s}
+.nav.on{transform:none}
+.nav b{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px}
+.nav .pr{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:26px}
+.nav .cta{padding:11px 24px;font-size:15px}
+
+/* ---------- INICIO ---------- */
+.hero{padding:0 0 9vh}
+.hero-in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;gap:4vw;align-items:center}
+.visor{position:relative}
+.foto{position:relative;aspect-ratio:4/3;overflow:hidden;background:#eadfdf;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 72%,transparent 100%)}
+.foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .45s;animation:entra 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes entra{from{transform:scale(1.09)}to{transform:scale(1)}}
+.mini{display:flex;gap:10px;margin:-6px 0 0;padding:0 6vw;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;position:relative;z-index:2}
+.mini::-webkit-scrollbar{display:none}
+.mini button{flex:0 0 58px;height:58px;border-radius:14px;overflow:hidden;border:1.5px solid transparent;padding:0;background:#fff;cursor:pointer;opacity:.7;transition:.25s;scroll-snap-align:start}
+.mini button.on,.mini button:hover{border-color:var(--flor);opacity:1}
+.mini img{width:100%;height:100%;object-fit:cover}
+
+.info{padding:26px 6vw 0}
+.info .tag{font-size:15px;color:var(--suave);margin-bottom:14px;animation:sube .9s .5s both}
+.info h1 span{display:block;white-space:nowrap}
+.info h1{font-size:clamp(50px,13vw,92px);font-style:italic;font-weight:300;line-height:.96;animation:sube 1s .65s both}
+@keyframes sube{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.estrellas{display:flex;align-items:center;gap:6px 12px;flex-wrap:wrap;font-size:15px;margin:22px 0 4px;animation:sube 1s .85s both}
+.estrellas .st{color:var(--flor);letter-spacing:2px;font-size:16px}
+.estrellas span,.estrellas a{white-space:nowrap}
+.estrellas a{color:var(--suave);text-decoration:none;border-bottom:1px solid var(--plata)}
+.precio-h{margin:18px 0 26px;animation:sube 1s 1s both}
+.precio-h .v{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(76px,11vw,132px);line-height:.88;letter-spacing:-.035em}
+.precio-h .v sup{font-size:.3em;vertical-align:top;position:relative;top:.2em;margin-left:.06em;letter-spacing:0}
+.precio-h .n{font-size:14px;color:var(--suave);margin-top:8px}
+.acc{display:flex;flex-direction:column;gap:12px;max-width:440px;animation:sube 1s 1.15s both}
+.acc small{color:var(--suave);font-size:14px}
+.garantias{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:14px;color:var(--suave);animation:sube 1s 1.3s both}
+.garantias span{display:inline-flex;align-items:center;gap:7px}
+.garantias svg{width:16px;height:16px;color:var(--flor)}
+
+/* ---------- EL ENCUENTRO (la jugada animada) ---------- */
+.encuentro{height:300vh;position:relative;background:var(--rubor)}
+.pin{position:sticky;top:0;height:100svh;display:grid;grid-template-rows:1fr auto;overflow:hidden}
+.escena{position:relative;display:grid;place-items:center}
+.cir{position:absolute;left:50%;top:50%;width:var(--d);height:var(--d);margin:calc(var(--d)/-2) 0 0 calc(var(--d)/-2);border-radius:50%;overflow:hidden;will-change:transform;box-shadow:0 30px 60px -30px rgba(43,24,34,.45)}
+.cir img{width:100%;height:100%;object-fit:cover}
+.cir.a{z-index:2}.cir.b{z-index:1}
+.cir.c{z-index:3;width:calc(var(--d)*var(--cf));height:calc(var(--d)*var(--cf));margin:calc(var(--d)*var(--cf)/-2) 0 0 calc(var(--d)*var(--cf)/-2);opacity:0}
+.frases{position:relative;height:clamp(110px,22vh,190px);text-align:center;padding:0 6vw}
+.frases p{position:absolute;top:0;left:6vw;right:6vw;font-size:clamp(40px,7vw,86px);font-style:italic;color:var(--tinta);opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.frases p.on{opacity:1;transform:none}
+
+/* ---------- SECCIONES ---------- */
+.seccion{padding:13vh 0}
+.titulo{margin-bottom:46px}
+.titulo h2{font-size:clamp(44px,6vw,78px);font-weight:300}
+.titulo h2 em{font-style:italic}
+
+/* qué recibís */
+.recibis{display:grid;grid-template-columns:1fr 1.15fr;gap:6vw;align-items:start}
+.lista{border-top:1px solid var(--plata)}
+.lista div{display:grid;grid-template-columns:9.5em 1fr;gap:18px;padding:19px 0;border-bottom:1px solid var(--plata)}
+.lista dt{color:var(--suave);font-size:15px;padding-top:2px}
+.lista dd{font-size:17.5px}
+.recibis .nota{margin-top:22px;color:var(--suave);font-size:15px;max-width:32em}
+.recibis figure{border-radius:200px 200px 22px 22px;overflow:hidden;aspect-ratio:4/5;background:#eadfdf}
+.recibis figure img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+
+/* mejor juntos */
+.juntos{background:#fff}
+.juntos .fila{display:grid;grid-template-columns:1.1fr 1fr;gap:6vw;align-items:center}
+.juntos .imagen{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:1/1;background:#eadfdf}
+.juntos .imagen img{width:100%;height:100%;object-fit:cover;will-change:transform}
+.juntos p.txt{font-size:19px;color:var(--suave);max-width:30em;margin-top:22px}
+.juntos .detalles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.juntos .detalles figure{border-radius:18px;overflow:hidden;aspect-ratio:1/1;position:relative;background:#eadfdf}
+.juntos .detalles img{width:100%;height:100%;object-fit:cover}
+.juntos .detalles figcaption{position:absolute;left:10px;bottom:10px;right:10px;font-size:13.5px;background:rgba(248,242,241,.92);padding:6px 12px;border-radius:999px;text-align:center}
+
+/* regalar */
+.regalar .ocasiones{border-top:1px solid var(--plata);max-width:820px}
+.regalar .oc{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:22px 0;border-bottom:1px solid var(--plata);font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(34px,5.2vw,60px);line-height:1.05;transition:color .3s,padding .3s}
+.regalar .oc:hover{color:var(--flor);padding-left:14px}
+.regalar .oc small{font-family:'Hanken Grotesk',sans-serif;font-style:normal;font-size:14px;color:var(--suave);text-align:right}
+.regalar p.nota{margin-top:26px;color:var(--suave);max-width:34em}
+
+/* precio final */
+.final{background:var(--rubor);text-align:center}
+.final .chico{font-size:clamp(32px,4vw,48px);font-style:italic;display:block;margin-bottom:6px}
+.final .monto{font-family:'Cormorant Garamond',serif;font-weight:400;white-space:nowrap;font-size:clamp(60px,16vw,230px);letter-spacing:-.045em;line-height:.95;margin:6px 0 4px}
+.final .monto sup{font-size:.3em;vertical-align:top;position:relative;top:.2em;margin-left:.05em;letter-spacing:0}
+.final .nota{color:var(--suave);font-size:15px;margin-bottom:30px}
+.datos{display:grid;grid-template-columns:repeat(3,1fr);margin:48px auto 0;max-width:560px;border-top:1px solid var(--plata)}
+.datos div{padding:22px 8px 0}
+.datos div+div{border-left:1px solid var(--plata)}
+.datos b{display:block;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:32px;line-height:1.1}
+.datos span{font-size:14px;color:var(--suave)}
+
+/* preguntas */
+.faq{max-width:780px}
+.faq details{border-bottom:1px solid var(--plata)}
+.faq details:first-child{border-top:1px solid var(--plata)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:27px;padding:20px 0}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font-family:'Hanken Grotesk';font-weight:400;font-size:26px;color:var(--flor);transition:transform .3s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq details p{color:var(--suave);padding:0 0 22px;max-width:40em}
+
+footer{padding:7vh 6vw 12vh;background:var(--perla)}
+.legal{max-width:64ch;font-size:13px;color:var(--suave);line-height:1.7}
+
+
+/* ---------- MÁS ANILLOS ---------- */
+.mas{font-size:15px;text-decoration:none;color:var(--suave);border-bottom:1px solid var(--plata);margin-left:auto;margin-right:18px}
+.catalogo{background:#fff}
+.catalogo .sub{color:var(--suave);max-width:34em;margin-top:14px;font-size:18px}
+.carrusel{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -6vw;padding:4px 6vw 18px;scrollbar-width:none}
+.carrusel::-webkit-scrollbar{display:none}
+.tarj{flex:0 0 min(78vw,340px);scroll-snap-align:center;display:flex;flex-direction:column;background:var(--perla);border-radius:22px;overflow:hidden}
+.tarj{border:1px solid #eadfdf}
+.tarj .ph{position:relative;aspect-ratio:1/1;background:#fff;cursor:pointer;overflow:hidden;margin:12px 12px 0;border-radius:16px}
+.tarj .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px;transition:opacity .45s}
+.tarj .ph img+img{opacity:0}
+.tarj .ph.dos img:first-child{opacity:0}.tarj .ph.dos img+img{opacity:1}
+.tarj .pts{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:7px}
+.tarj .pts i{width:7px;height:7px;border-radius:50%;background:var(--plata)}
+.tarj .pts i.on{background:var(--flor)}
+.tarj .cuerpo{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.tarj h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:29px;line-height:1.05}
+.tarj p{color:var(--suave);font-size:15.5px;margin:8px 0 12px}
+.tarj .est{font-size:14px;color:var(--suave);margin-bottom:12px}
+.tarj .est b{color:var(--tinta)}.tarj .est .st{color:var(--flor);letter-spacing:1px}
+.tarj .pie{margin-top:auto}
+.tarj .pr{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:42px;line-height:1;margin-bottom:14px}
+.tarj .pr sup{font-size:.4em;vertical-align:top;position:relative;top:.2em;margin-left:.06em}
+.tarj .cta{width:100%;padding:15px 20px;font-size:16px}
+.catalogo .nota{margin-top:26px;color:var(--suave);font-size:14px;max-width:46em}
+@media(min-width:901px){.carrusel{display:grid;grid-template-columns:repeat(3,1fr);margin:0;padding:0;overflow:visible;gap:22px}.tarj{flex:none}.nav .mas{margin-left:auto}}
+@media(max-width:900px){.nav .mas{display:none}}
+.otro{display:inline-block;margin-top:18px;font-size:15px;color:var(--suave);animation:sube 1s 1.4s both}
+.otro a{color:var(--flor);text-decoration:none;border-bottom:1px solid var(--flor)}
+
+/* barra móvil */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(248,242,241,.95);backdrop-filter:blur(12px);border-top:1px solid rgba(189,180,186,.6);transform:translateY(110%);transition:transform .4s}
+.barra.on{transform:none}
+.barra .p{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px;line-height:1}
+.barra .p small{display:block;font-family:'Hanken Grotesk';font-weight:400;font-size:11.5px;color:var(--suave);margin-top:3px}
+.barra .cta{padding:13px 26px;font-size:16px}
+
+@media(max-width:900px){
+  body{padding-bottom:70px;font-size:16.5px}
+  .hero-in{grid-template-columns:1fr;gap:0}
+  .info{padding-top:22px}
+  .recibis,.juntos .fila{grid-template-columns:1fr;gap:36px}
+  .recibis figure{max-width:420px;border-radius:180px 180px 20px 20px}
+  .lista div{grid-template-columns:7.2em 1fr;gap:14px}
+  .barra{display:flex}
+  .nav{display:none}
+}
+@media(min-width:901px){
+  .info h1{font-size:clamp(56px,5.6vw,92px)}
+  :root{--d:min(26vw,40vh);--cf:1.75}
+  .foto{-webkit-mask-image:none;mask-image:none;border-radius:0 28px 28px 0}
+  .mini{padding:0 0 0 2vw;margin-top:14px}
+  .info{padding:0 6vw 0 0}
+}
+@media(max-width:520px){.datos b{font-size:25px;white-space:nowrap}.datos span{font-size:12.5px}.cta.grande{font-size:17px;padding:19px 20px}.regalar .oc small{display:none}}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .encuentro{height:auto}.pin{position:static;height:auto;padding:10vh 0}.escena{height:60vh}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav"><b>Nuestro detalle</b><a class="mas" href="#mas-anillos">Más anillos</a><span class="pr" id="precioNav">$ 14.416</span><a class="cta" href="#" data-ml>Comprar ahora</a></header>
+
+<section class="hero" id="inicio">
+  <div class="hero-in">
+    <div class="visor">
+      <div class="foto"><img id="foto" src="img/hero.jpg" alt="Dos anillos de promesa: uno con flor de cerezo rosa, otro con rama de esmalte negro" width="1075" height="806"></div>
+      <div class="mini" id="mini" role="group" aria-label="Fotos del producto"></div>
+    </div>
+
+    <div class="info">
+      <p class="tag">Set de dos anillos, uno para cada uno</p>
+      <h1 class="serif"><span>Una flor,</span> <span>una rama,</span> <span>una promesa.</span></h1>
+      <div class="estrellas"><span class="st" aria-hidden="true">★★★★★</span><span><b>4,6</b> de 5</span><a href="#preguntas">209 opiniones · +1000 vendidos</a></div>
+      <div class="precio-h">
+        <div class="v" id="precioHero">$ 14.416<sup>55</sup></div>
+        <div class="n" id="fechaHero">el set completo, precio en Mercado Libre</div>
+      </div>
+      <div class="acc">
+        <a class="cta grande" href="#" data-ml>Comprar en Mercado Libre
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+        <small>Pagás y recibís dentro de Mercado Libre</small>
+      </div>
+      <div class="garantias">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Compra protegida</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Envío Full</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="13" rx="2"/><path d="M2.5 10.5h19"/></svg>Todos los medios de pago</span>
+      </div>
+      <p class="otro">¿Buscás otro modelo? <a href="#mas-anillos">Mirá más anillos para la pareja</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="encuentro" id="encuentro" aria-label="Cómo se completan los dos anillos">
+  <div class="pin">
+    <div class="escena">
+      <div class="cir a"><img src="img/anillo-flor.jpg" alt="Anillo con flor de cerezo esmaltada en rosa" loading="lazy"></div>
+      <div class="cir b"><img src="img/anillo-rama.jpg" alt="Anillo con forma de rama y esmalte negro" loading="lazy"></div>
+      <div class="cir c"><img src="img/anillos-par.jpg" alt="Los dos anillos juntos" loading="lazy"></div>
+    </div>
+    <div class="frases serif">
+      <p class="on">Uno es la flor.</p>
+      <p>El otro, la rama.</p>
+      <p>Juntos, un cerezo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="wrap">
+    <div class="titulo"><h2 class="serif">Qué <em>recibís</em></h2></div>
+    <div class="recibis">
+      <div>
+        <dl class="lista">
+          <div><dt>El set</dt><dd>Dos anillos: uno para cada uno</dd></div>
+          <div><dt>El primero</dt><dd>Flor de cerezo con esmalte rosa y piedras</dd></div>
+          <div><dt>El segundo</dt><dd>Rama con relieve de corteza y esmalte negro</dd></div>
+          <div><dt>Talle</dt><dd>Ajustable: se abre o se cierra hasta quedar justo</dd></div>
+          <div><dt>Hechura</dt><dd>Hecho a mano</dd></div>
+          <div><dt>Entrega</dt><dd>Bolsita de papel o transparente, sin caja</dd></div>
+          <div><dt>Envío</dt><dd>Full de Mercado Libre</dd></div>
+        </dl>
+        <p class="nota">Si lo vas a regalar, sumá un estuche o una caja aparte: el set llega en bolsita.</p>
+      </div>
+      <figure><img src="img/anillos-solo.jpg" alt="El set de dos anillos sobre fondo blanco" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="seccion juntos">
+  <div class="wrap">
+    <div class="fila">
+      <div class="imagen"><img id="parallax" src="img/anillos-par.jpg" alt="Los dos anillos juntos formando un cerezo" loading="lazy"></div>
+      <div>
+        <h2 class="serif" style="font-size:clamp(44px,6vw,78px)">Se ven lindos solos. <em>Mejor juntos.</em></h2>
+        <p class="txt">Cada anillo cuenta una mitad. Uno lleva la flor, el otro la rama, y cuando se apoyan uno sobre otro forman el cerezo completo.</p>
+        <div class="detalles">
+          <figure><img src="img/anillo-flor.jpg" alt="Anillo de flor de cerezo" loading="lazy" style="object-position:50% 52%"><figcaption>La flor</figcaption></figure>
+          <figure><img src="img/anillo-rama.jpg" alt="Anillo de rama con esmalte negro" loading="lazy" style="object-position:50% 45%"><figcaption>La rama</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion regalar">
+  <div class="wrap">
+    <div class="titulo"><h2 class="serif">Para decirlo <em>sin palabras</em></h2></div>
+    <div class="ocasiones">
+      <div class="oc">Un aniversario</div>
+      <div class="oc">Una promesa</div>
+      <div class="oc">San Valentín</div>
+      <div class="oc">Navidad</div>
+      <div class="oc">Un cumpleaños</div>
+      <div class="oc">Porque sí</div>
+    </div>
+    <p class="nota">Un regalo chico, que se lleva todos los días.</p>
+  </div>
+</section>
+
+<section class="seccion final" id="precio">
+  <div class="wrap">
+    <span class="serif chico">hoy, para los dos</span>
+    <div class="monto" id="monto">$ 14.416<sup>55</sup></div>
+    <p class="nota" id="fecha">Precio publicado en Mercado Libre</p>
+    <a class="cta grande" href="#" data-ml>Comprar en Mercado Libre
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+    <div class="datos">
+      <div><b>+1000</b><span>vendidos</span></div>
+      <div><b>4,6 de 5</b><span>209 opiniones</span></div>
+      <div><b>Full</b><span>envío rápido</span></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="seccion catalogo" id="mas-anillos">
+  <div class="wrap">
+    <div class="titulo"><h2 class="serif">Anillos para <em>la pareja</em></h2><p class="sub">Más sets para elegir, todos de a dos. Tocá la foto para ver otra vista.</p></div>
+    <div class="carrusel" id="carrusel"></div>
+    <p class="nota">Las estrellas y las ventas son las que muestra cada publicación en Mercado Libre. Los precios se renuevan una vez por semana: confirmalos en la publicación antes de pagar.</p>
+  </div>
+</section>
+
+<section class="seccion" id="preguntas">
+  <div class="wrap">
+    <div class="titulo"><h2 class="serif">Antes de <em>decidir</em></h2></div>
+    <div class="faq">
+      <details><summary>¿Qué talle es?</summary><p>Son ajustables. Se abren o se cierran hasta que queden justos, así que sirven para cualquier dedo.</p></details>
+      <details><summary>¿Qué trae el set?</summary><p>Dos anillos: uno con flor de cerezo y otro con rama, en negro y plateado.</p></details>
+      <details><summary>¿Cómo llegan?</summary><p>Se entregan en una bolsita de papel o transparente, sin caja. Si lo vas a regalar, conviene sumar un estuche o una caja aparte. El envío Full de Mercado Libre los trae rápido.</p></details>
+      <details><summary>¿Cómo se paga?</summary><p>La compra se hace dentro de Mercado Libre, con Mercado Pago: tarjetas, efectivo y otros medios. Las cuotas y promociones las ves en la publicación.</p></details>
+      <details><summary>¿Y si algo sale mal?</summary><p>Comprás con la protección de Mercado Libre. Las condiciones de devolución las confirmás en la publicación antes de pagar.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><p class="legal">Esta página es independiente y no pertenece a Mercado Libre. Si comprás desde el botón, puedo recibir una comisión sin costo extra para vos. El precio, el stock y el envío los define el vendedor y pueden cambiar: confirmá los datos finales en Mercado Libre antes de pagar.</p></div>
+</footer>
+
+<div class="barra" id="barra">
+  <div class="p" id="precioBarra">$ 14.416<small>Set de dos anillos</small></div>
+  <a class="cta" href="#" data-ml>Comprar</a>
+</div>
+
+<script>
+var LINK_ML='https://meli.la/15a5Y1n';
+var FOTOS=[['img/hero.jpg','Los dos anillos apoyados uno sobre otro'],['img/anillos-solo.jpg','El set de dos anillos sobre fondo blanco'],['img/anillo-flor.jpg','Anillo con flor de cerezo'],['img/anillo-rama.jpg','Anillo con rama de esmalte negro'],['img/anillos-par.jpg','Los dos anillos juntos']];
+document.querySelectorAll('[data-ml]').forEach(function(a){a.href=LINK_ML;a.target='_blank';a.rel='noopener sponsored'});
+
+/* galería del producto */
+var foto=document.getElementById('foto'),mini=document.getElementById('mini');
+FOTOS.forEach(function(f,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ver foto '+(i+1));if(i===0)b.className='on';
+  b.innerHTML='<img src="'+f[0]+'" alt="">';
+  b.onclick=function(){foto.style.opacity=0;setTimeout(function(){foto.src=f[0];foto.alt=f[1];foto.style.opacity=1},180);[].forEach.call(mini.children,function(x){x.classList.remove('on')});b.classList.add('on')};
+  mini.appendChild(b)});
+
+/* precio vivo: lo trae de precio.json (lo renueva el chequeo semanal) */
+function fmt(n){return new Intl.NumberFormat('es-AR',{maximumFractionDigits:0}).format(Math.floor(n))}
+function ponerPrecio(p){
+  var ent=Math.floor(p.precio),cent=String(Math.round((p.precio-ent)*100)).padStart(2,'0');
+  var el=document.getElementById('monto'),t0=null,hecho=false;
+  function paso(t){t0=t0||t;var k=Math.min(1,(t-t0)/1500),e=1-Math.pow(1-k,3);el.innerHTML='$ '+fmt(ent*e)+'<sup>'+cent+'</sup>';if(k<1)requestAnimationFrame(paso)}
+  new IntersectionObserver(function(es,o){if(es[0].isIntersecting&&!hecho){hecho=true;
+    if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.innerHTML='$ '+fmt(ent)+'<sup>'+cent+'</sup>'}else{requestAnimationFrame(paso)}o.disconnect()}},{threshold:.5}).observe(el);
+  document.getElementById('precioHero').innerHTML='$ '+fmt(ent)+'<sup>'+cent+'</sup>';
+  document.getElementById('precioNav').textContent='$ '+fmt(ent);
+  document.getElementById('precioBarra').innerHTML='$ '+fmt(ent)+'<small>Set de dos anillos</small>';
+  var f=document.getElementById('fecha'),h=document.getElementById('fechaHero');
+  if(p.actualizado&&!p.consultar){var d=new Date(p.actualizado+'T12:00:00');var ds=d.toLocaleDateString('es-AR',{day:'numeric',month:'long'});
+    f.textContent='Precio al '+ds+'. Confirmalo en Mercado Libre antes de comprar.';h.textContent='el set completo, precio al '+ds}
+  else{f.textContent='Consultá el precio actual en Mercado Libre.';h.textContent='el set completo, consultá el precio actual'}
+}
+
+/* catálogo: más anillos para la pareja */
+var CATALOGO=[
+ {id:'estuche',nombre:'Corazón partido, con estuche',txt:'Cada anillo lleva una mitad del corazón. Ajustables y con estuche en forma de corazón.',fotos:['img/estuche-1.jpg','img/estuche-3.jpg'],estr:'4,8',op:'116 opiniones',vend:'+500 vendidos',precio:31344,link:'https://meli.la/148Q4RY'},
+ {id:'iloveyou',nombre:'Medio corazón, I love you',txt:'Dos anillos con un corazón que se completa al juntarlos y la frase grabada por dentro.',fotos:['img/iloveyou-1.jpg'],estr:'4,9',op:'11 opiniones',vend:'+50 vendidos',precio:18420,link:'https://meli.la/1EqEqY3'},
+ {id:'modernos',nombre:'Solitario y banda, ajustables',txt:'Un anillo con piedra central y otro de banda con relieve. Se ajustan al dedo.',fotos:['img/modernos-1.jpg','img/modernos-2.jpg'],estr:'4,2',op:'130 opiniones',vend:'+500 vendidos',precio:13437,link:'https://meli.la/1p6GkE4'},
+ {id:'elegantes',nombre:'Elegantes, con zirconias',txt:'Un par con piedras blancas: uno más ancho y otro más fino, para usar todos los días.',fotos:['img/elegantes-1.jpg','img/elegantes-2.jpg'],estr:'4,1',op:'61 opiniones',vend:'+100 vendidos',precio:13415,link:'https://meli.la/2tVLmoL'},
+ {id:'endless',nombre:'Endless love, regulables',txt:'Uno con corazón calado y la frase endless love, el otro con un corazón de piedra.',fotos:['img/endless-1.jpg','img/endless-2.jpg'],estr:'4,1',op:'148 opiniones',vend:'+500 vendidos',precio:15189,link:'https://meli.la/2YTytyA'}
+];
+function cat$(n){return '$ '+fmt(n)}
+function pintarCatalogo(precios){
+  var box=document.getElementById('carrusel');box.innerHTML='';
+  CATALOGO.forEach(function(p){
+    var pr=(precios&&precios[p.id]&&precios[p.id].precio)?precios[p.id].precio:p.precio;
+    var a=document.createElement('article');a.className='tarj';
+    var imgs=p.fotos.map(function(f,i){return '<img src="'+f+'" alt="'+p.nombre+(i?' (otra vista)':'')+'" loading="lazy">'}).join('');
+    var pts=p.fotos.length>1?'<div class="pts"><i class="on"></i><i></i></div>':'';
+    a.innerHTML='<div class="ph" role="img" aria-label="'+p.nombre+'">'+imgs+pts+'</div>'+
+     '<div class="cuerpo"><h3>'+p.nombre+'</h3><p>'+p.txt+'</p>'+
+     '<div class="est"><span class="st" aria-hidden="true">★</span> <b>'+p.estr+'</b> · '+p.op+' · '+p.vend+'</div>'+
+     '<div class="pie"><div class="pr">'+cat$(pr)+'</div><a class="cta" href="'+p.link+'" target="_blank" rel="noopener sponsored">Ver en Mercado Libre</a></div></div>';
+    var ph=a.querySelector('.ph');
+    if(p.fotos.length>1)ph.onclick=function(){var d=ph.classList.toggle('dos');var is=ph.querySelectorAll('.pts i');is[0].classList.toggle('on',!d);is[1].classList.toggle('on',d)};
+    box.appendChild(a);
+  });
+}
+pintarCatalogo(null);
+fetch('precio.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(p){ponerPrecio(p);pintarCatalogo(p.productos)}).catch(function(){});
+
+/* el encuentro: los anillos se acercan mientras se baja */
+(function(){
+  var sec=document.getElementById('encuentro');
+  var A=sec.querySelector('.cir.a'),B=sec.querySelector('.cir.b'),C=sec.querySelector('.cir.c'),F=sec.querySelectorAll('.frases p');
+  var quieto=matchMedia('(prefers-reduced-motion:reduce)').matches,actual=-1;
+  function ease(x){return x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2}
+  function pintar(){
+    var r=sec.getBoundingClientRect(),total=sec.offsetHeight-innerHeight;
+    var p=quieto?1:Math.min(1,Math.max(0,-r.top/total));
+    var m=ease(Math.min(1,p/.6)),d=A.offsetWidth,s=d*(1.22-.7*m);
+    A.style.transform='translate('+(-s/2)+'px,0) rotate('+(-14*(1-m))+'deg)';
+    B.style.transform='translate('+(s/2)+'px,0) rotate('+(14*(1-m))+'deg)';
+    var c=ease(Math.min(1,Math.max(0,(p-.64)/.3)));
+    C.style.opacity=c;C.style.transform='scale('+(.5+.5*c)+')';
+    var i=p<.28?0:p<.62?1:2;
+    if(i!==actual){actual=i;F.forEach(function(n,k){n.classList.toggle('on',k===i)})}
+  }
+  addEventListener('scroll',function(){requestAnimationFrame(pintar)},{passive:true});
+  addEventListener('resize',pintar);pintar();
+})();
+
+/* foto "mejor juntos": se acerca muy despacio al bajar */
+(function(){
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var im=document.getElementById('parallax'),box=im.parentNode;
+  function z(){var r=box.getBoundingClientRect(),k=Math.min(1,Math.max(0,(innerHeight-r.top)/(innerHeight+r.height)));im.style.transform='scale('+(1+.12*k)+')'}
+  addEventListener('scroll',function(){requestAnimationFrame(z)},{passive:true});z();
+})();
+
+/* barras de compra al bajar del primer bloque */
+(function(){
+  var b=document.getElementById('barra'),n=document.getElementById('nav'),h=document.getElementById('inicio');
+  function f(){var pasó=scrollY>h.offsetHeight*.75;b.classList.toggle('on',pasó);n.classList.toggle('on',pasó)}
+  addEventListener('scroll',f,{passive:true});f();
+})();
+</script>
+</body>
+</html>
