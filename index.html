@@ -434,6 +434,8 @@ footer{margin-top:50px;border-top:1px solid var(--linea);padding:34px 4vw 40px}
 }
 .top .marca{display:flex;align-items:center}.top .marca img{height:36px;width:auto;max-width:none}@media(min-width:901px){.top .marca img{height:46px}}
 </style>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1162654609584244');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1162654609584244&ev=PageView&noscript=1"></noscript>
 </head>
 <body>
 
@@ -851,7 +853,7 @@ function ruta(){
   function ver(n){vs.forEach(function(v){document.getElementById('v-'+v).hidden=(v!==n)})}
   var item=cat&&id?buscar(cat,id):null,activo='inicio';if(cat.indexOf('?')>-1)cat='';
   if(item&&item.id==='flor'){ver('flor');activo=cat;barra(item);document.title='Nuestro detalle · '+item.nombre}
-  else if(item){pintarDetalle(cat,item);ver('det');activo=cat;barra(item);document.title='Nuestro detalle · '+item.nombre}
+  else if(item){pintarDetalle(cat,item);ver('det');activo=cat;barra(item);document.title='Nuestro detalle · '+item.nombre;try{fbq('track','ViewContent',{content_name:item.nombre,content_ids:[item.id],content_type:'product',currency:'ARS'})}catch(e){}}
   else if(CATS[cat]){pintarLista(cat);ver('lista');activo=cat;barra(null);document.title='Nuestro detalle · '+CATS[cat].nombre+' para la pareja'}
   else{ver('inicio');barra(null);document.title=TITULO0}
   document.querySelectorAll('#drawer a').forEach(function(a){a.classList.toggle('on',a.dataset.r===activo)});
@@ -860,7 +862,10 @@ function ruta(){
 function cerrarMenu(){document.getElementById('drawer').classList.remove('on');var b=document.getElementById('burger');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Abrir menú')}
 document.getElementById('burger').onclick=function(){var d=document.getElementById('drawer'),on=d.classList.toggle('on');this.setAttribute('aria-expanded',on?'true':'false');this.setAttribute('aria-label',on?'Cerrar menú':'Abrir menú')};
 addEventListener('keydown',function(e){if(e.key==='Escape')cerrarMenu()});
+addEventListener('hashchange',function(){try{fbq('track','PageView')}catch(e){}});
 addEventListener('hashchange',ruta);
+/* pixel: clic en comprar (sale a Mercado Libre) */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="https://meli.la"]');if(a){try{fbq('track','InitiateCheckout',{content_name:(document.title||'').replace('Nuestro detalle · ',''),currency:'ARS'})}catch(x){}}},true);
 pintarInicio();ruta();
 fetch('precio.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(p){PRECIOS=p.productos;if(p.precio)FLOR_PRECIO=p.precio;ponerPrecio(p);ruta()}).catch(function(){});
 
