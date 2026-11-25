@@ -26,6 +26,24 @@
     },
     "grabado": {
       "precio": 34999
+    },
+    "iman-plateado": {
+      "precio": 25351
+    },
+    "alas": {
+      "precio": 9683.51
+    },
+    "asa-corazon": {
+      "precio": 32999
+    },
+    "rompecabezas": {
+      "precio": 35000
+    },
+    "corazon-grabado": {
+      "precio": 33000
+    },
+    "iman-love": {
+      "precio": 9603
     }
   }
 }

@@ -270,8 +270,11 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
 </header>
 <nav class="drawer" id="drawer" aria-label="Categorías">
   <a href="#/" data-r="inicio">Inicio</a>
-  <a href="#/anillos" data-r="anillos">Anillos <small id="nAnillos"></small></a>
-  <a href="#/pulseras" data-r="pulseras">Pulseras <small id="nPulseras"></small></a>
+  <a href="#/anillos" data-r="anillos">Anillos <small data-n="anillos"></small></a>
+  <a href="#/pulseras" data-r="pulseras">Pulseras <small data-n="pulseras"></small></a>
+  <a href="#/collares" data-r="collares">Collares <small data-n="collares"></small></a>
+  <a href="#/tazas" data-r="tazas">Tazas <small data-n="tazas"></small></a>
+  <a href="#/llaveros" data-r="llaveros">Llaveros <small data-n="llaveros"></small></a>
 </nav>
 
 <main>
@@ -290,7 +293,7 @@ footer{padding:7vh 6vw 12vh;background:var(--perla)}
     <p class="sub" id="listaSub"></p>
   </div>
   <div class="grilla" id="grilla"></div>
-  <p class="nota-p">Las estrellas y las ventas son las que muestra cada publicación en Mercado Libre. Los precios se renuevan una vez por semana: confirmalos en la publicación antes de pagar.</p>
+  <p class="nota-p">Las estrellas y las ventas son las que muestra cada publicación en Mercado Libre. Los precios son los de la última revisión (25/11): confirmalos en la publicación antes de pagar.</p>
 </div>
 
 <div class="vista" id="v-det" hidden></div>
@@ -481,6 +484,18 @@ var CATS={
   {id:'iman',nombre:'Corazón con imán, con estuche',tag:'Set de dos pulseras, con estuche',txt:'Cada pulsera lleva una mitad del corazón: al juntarlas, el imán las une. Vienen en estuche para regalar.',fotos:['img/iman-1.jpg','img/iman-2.jpg'],estr:'4,3',op:'78 opiniones',vend:'+100 vendidos',precio:22969,link:'https://meli.la/1oixjK2',recibis:[['El set','Dos pulseras: una para cada uno'],['Diseño','Cada una lleva una mitad de corazón con imán'],['Material','Titanio'],['Entrega','En estuche para regalar']]},
   {id:'grabado',nombre:'Con fecha o nombre grabado',tag:'Set de dos pulseras grabadas',txt:'Dos pulseras de acero quirúrgico con chapa grabada. Después de comprar, le avisás al vendedor qué querés grabar.',fotos:['img/grabado-1.jpg'],estr:'4,7',op:'152 opiniones',vend:'+500 vendidos',precio:34999,link:'https://meli.la/1roPgTx',recibis:[['El set','Dos pulseras: una para cada uno'],['Material','Acero quirúrgico'],['Grabado','Una fecha o un nombre en la chapa'],['Talle','Ajustable']],faq:[['¿Cómo pido el grabado?','Cuando hacés la compra, le escribís al vendedor por mensaje qué querés grabar y con qué letra. Mientras antes lo indiques, antes lo preparan.']]}
  ]}
+ ,collares:{nombre:'Collares',titulo:'Collares <em>para compartir</em>',sub:'Cada uno lleva una mitad del corazón. Al acercarse, el imán las une.',unidad:'sets',foto:'img/collar-choker-1.jpg',items:[
+  {id:'iman-plateado',nombre:'Corazón con imán, plateados',tag:'Dos collares, un corazón partido',txt:'Dos cadenas de 50 cm con un corazón imantado: cada uno lleva una mitad y encajan al juntarse.',fotos:['img/collar-iman-1.jpg'],estr:'4,0',op:'21 opiniones',vend:'+100 vendidos',precio:25351,link:'https://meli.la/25qWLj2',recibis:[['El set','Dos collares, uno para cada uno'],['Diseño','Corazón partido con imán'],['Largo','50 cm'],['Estilo','Para parejas, amigos o a distancia']]},
+  {id:'alas',nombre:'Corazón con alas, plata y dorado',tag:'Dos collares, uno plateado y uno dorado',txt:'Un corazón partido en dos mitades con imán: una en tono plateado y otra en dorado, cada una en su cadena.',fotos:['img/collar-choker-1.jpg'],estr:'4,5',op:'2 opiniones',vend:'+5 vendidos',precio:9683.51,link:'https://meli.la/1eq5YrD',recibis:[['El set','Dos collares con cadena'],['Diseño','Corazón partido con imán'],['Colores','Una mitad plateada y otra dorada'],['Largo','50 cm']]}
+ ]}
+ ,tazas:{nombre:'Tazas',titulo:'Tazas <em>para dos</em>',sub:'El desayuno de los dos, con una taza para cada uno.',unidad:'sets',foto:'img/taza-corazon-1.jpg',items:[
+  {id:'asa-corazon',nombre:'Tazas con asa de corazón, personalizables',tag:'Par de tazas que encajan entre sí',txt:'Dos tazas blancas con asa en forma de corazón que se pueden juntar. Se personalizan con logo, foto o frase.',fotos:['img/taza-corazon-1.jpg','img/taza-corazon-2.jpg'],estr:null,vend:'1 vendido',precio:32999,link:'https://meli.la/2W82esC',recibis:[['El set','Dos tazas de cerámica'],['Capacidad','330 mL cada una'],['Alto','9,5 cm'],['Personalizado','Con logo, foto o frase']],faq:[['¿Cómo pido la personalización?','Después de comprar, le escribís al vendedor por mensaje qué foto o frase querés y te la preparan.']]},
+  {id:'rompecabezas',nombre:'Set de tazas rompecabezas de amor',tag:'Dos tazas que se completan',txt:'Cada taza lleva una mitad de un diseño de rompecabezas con un corazón: juntas, se completan.',fotos:['img/taza-rompe-1.jpg'],estr:null,vend:'Publicación nueva',precio:35000,link:'https://meli.la/1rSiijf',recibis:[['El set','Dos tazas de cerámica'],['Diseño','Rompecabezas con corazón, una mitad en cada taza'],['Capacidad','350 mL cada una'],['Alto','10 cm']],nota:'La foto es ilustrativa; el diseño exacto lo ves en la publicación.'}
+ ]}
+ ,llaveros:{nombre:'Llaveros',titulo:'Llaveros <em>de a dos</em>',sub:'Uno para cada uno, para llevar siempre en las llaves.',unidad:'pares',foto:'img/llavero-grabado-2.jpg',items:[
+  {id:'corazon-grabado',nombre:'Corazón partido, grabado con 2 nombres',tag:'Par de llaveros con grabado',txt:'Un corazón plateado mate partido al medio: cada llavero lleva una mitad, grabadas con los nombres.',fotos:['img/llavero-grabado-1.jpg','img/llavero-grabado-2.jpg'],estr:'5,0',op:'6 opiniones',vend:'+25 vendidos',precio:33000,link:'https://meli.la/2tgn9aH',recibis:[['El set','Dos llaveros, uno para cada uno'],['Diseño','Corazón partido en dos mitades'],['Color','Plateado mate'],['Grabado','Dos nombres']],faq:[['¿Cómo pido el grabado?','Cuando hacés la compra, le escribís al vendedor por mensaje qué nombres querés grabar.']]},
+  {id:'iman-love',nombre:'Corazones con imán, para compartir',tag:'Par de llaveros que se unen',txt:'Dos llaveros de metal con forma de corazón y un imán: al juntarlos, las mitades encajan.',fotos:['img/llavero-corazon-1.jpg'],estr:'5,0',op:'1 opinión',vend:'2 vendidos',precio:9603,link:'https://meli.la/34nBAvh',recibis:[['El set','Dos llaveros'],['Material','Metal'],['Medidas','9 cm de alto y 3 cm de ancho'],['Imán','Las dos mitades se unen']]}
+ ]}
 };
 var PRECIOS=null,FLOR_PRECIO=14416.55;
 function cat$(n){var e=Math.floor(n),c=Math.round((n-e)*100);return '$ '+fmt(e)+(c?'<sup>'+String(c).padStart(2,'0')+'</sup>':'')}
@@ -489,9 +504,8 @@ function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
 function buscar(c,id){var l=CATS[c];if(!l)return null;for(var i=0;i<l.items.length;i++)if(l.items[i].id===id)return l.items[i];return null}
 
 function pintarInicio(){
-  document.getElementById('nAnillos').textContent=CATS.anillos.items.length+' sets';
-  document.getElementById('nPulseras').textContent=CATS.pulseras.items.length+' pares';
-  document.getElementById('cats').innerHTML=['anillos','pulseras'].map(function(k){var c=CATS[k];
+  Object.keys(CATS).forEach(function(k){var el=document.querySelector('[data-n="'+k+'"]');if(el)el.textContent=CATS[k].items.length+' '+CATS[k].unidad});
+  document.getElementById('cats').innerHTML=Object.keys(CATS).map(function(k){var c=CATS[k];
     return '<a class="cat" href="#/'+k+'"><img src="'+c.foto+'" alt="" loading="lazy"><div class="rot"><h2>'+c.nombre+'</h2><span>'+c.items.length+' '+c.unidad+' para elegir</span></div></a>'}).join('');
 }
 function pintarLista(k){
@@ -501,13 +515,13 @@ function pintarLista(k){
   document.getElementById('grilla').innerHTML=c.items.map(function(p){
     return '<a class="tarj" href="#/'+k+'/'+p.id+'"><div class="ph" role="img" aria-label="'+esc(p.nombre)+'"><img src="'+p.fotos[0]+'" alt="'+esc(p.nombre)+'" loading="lazy"></div>'+
      '<div class="cuerpo"><h3>'+esc(p.nombre)+'</h3><p>'+esc(p.txt)+'</p>'+
-     '<div class="est"><span class="st" aria-hidden="true">★</span> <b>'+p.estr+'</b> · '+p.op+' · '+p.vend+'</div>'+
+     '<div class="est">'+(p.estr?'<span class="st" aria-hidden="true">★</span> <b>'+p.estr+'</b> · '+p.op+' · ':'')+p.vend+'</div>'+
      '<div class="pie"><div class="pr">'+cat$(precioDe(p))+'</div><span class="cta btn">Ver detalle</span></div></div></a>'}).join('');
 }
 var SVG_FLECHA='<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>';
 function pintarDetalle(k,p){
   var pr=precioDe(p),e=Math.floor(pr),c=Math.round((pr-e)*100),sup=c?'<sup>'+String(c).padStart(2,'0')+'</sup>':'';
-  var n=parseFloat(String(p.estr).replace(',','.')),est='★★★★★'.slice(0,Math.round(n))+'☆☆☆☆☆'.slice(0,5-Math.round(n));
+  var n=p.estr?parseFloat(String(p.estr).replace(',','.')):0,est='★★★★★'.slice(0,Math.round(n))+'☆☆☆☆☆'.slice(0,5-Math.round(n));
   var fecha=(PRECIOS&&PRECIOS[p.id]&&PRECIOS[p.id].consultar===false)||(PRECIOS&&PRECIOS[p.id]&&PRECIOS[p.id].consultar===undefined)?'precio publicado en Mercado Libre':'precio de referencia, confirmalo en Mercado Libre';
   var faq=(p.faq||[]).concat(FAQ_COMUN).map(function(f){return '<details><summary>'+f[0]+'</summary><p>'+f[1]+'</p></details>'}).join('');
   var lista=p.recibis.map(function(r){return '<div><dt>'+r[0]+'</dt><dd>'+r[1]+'</dd></div>'}).join('');
@@ -515,15 +529,15 @@ function pintarDetalle(k,p){
   document.getElementById('v-det').innerHTML=
   '<section class="hero"><div class="hero-in"><div class="visor"><div class="foto g"><img id="gfoto" src="'+p.fotos[0]+'" alt="'+esc(p.nombre)+'" width="1075" height="806"></div><div class="mini" id="gmini" role="group" aria-label="Fotos del producto"></div></div>'+
   '<div class="info"><p class="tag">'+p.tag+'</p><h1 class="serif largo">'+esc(p.nombre)+'</h1>'+
-  '<div class="estrellas"><span class="st" aria-hidden="true">'+est+'</span><span><b>'+p.estr+'</b> de 5</span><span>'+p.op+' · '+p.vend+'</span></div>'+
+  '<div class="estrellas">'+(p.estr?'<span class="st" aria-hidden="true">'+est+'</span><span><b>'+p.estr+'</b> de 5</span><span>'+p.op+' · '+p.vend+'</span>':'<span>'+p.vend+'</span>')+'</div>'+
   '<div class="precio-h"><div class="v">$ '+fmt(e)+sup+'</div><div class="n">el set completo, '+fecha+'</div></div>'+
   '<div class="acc"><a class="cta grande" href="'+p.link+'" target="_blank" rel="noopener sponsored">Comprar en Mercado Libre '+SVG_FLECHA+'</a><small>Pagás y recibís dentro de Mercado Libre</small></div>'+
   '<div class="garantias"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Compra protegida</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="13" rx="2"/><path d="M2.5 10.5h19"/></svg>Todos los medios de pago</span></div>'+
   '<p class="otro"><a href="#/'+k+'">Ver todos: '+CATS[k].nombre.toLowerCase()+' para la pareja</a></p></div></div></section>'+
-  '<section class="seccion"><div class="wrap"><div class="titulo"><h2 class="serif">Qué <em>recibís</em></h2></div><div class="recibis"><div><dl class="lista">'+lista+'</dl><p class="nota">Las fotos y las medidas exactas las ves en la publicación de Mercado Libre.</p></div><figure><img src="'+foto2+'" alt="'+esc(p.nombre)+'" loading="lazy" style="object-fit:contain;background:#fff"></figure></div></div></section>'+
+  '<section class="seccion"><div class="wrap"><div class="titulo"><h2 class="serif">Qué <em>recibís</em></h2></div><div class="recibis"><div><dl class="lista">'+lista+'</dl><p class="nota">'+(p.nota||'Las fotos y las medidas exactas las ves en la publicación de Mercado Libre.')+'</p></div><figure><img src="'+foto2+'" alt="'+esc(p.nombre)+'" loading="lazy" style="object-fit:contain;background:#fff"></figure></div></div></section>'+
   '<section class="seccion regalar"><div class="wrap"><div class="titulo"><h2 class="serif">Para decirlo <em>sin palabras</em></h2></div><div class="ocasiones">'+OCASIONES.map(function(o){return '<div class="oc">'+o+'</div>'}).join('')+'</div><p class="nota">Un regalo chico, que se lleva todos los días.</p></div></section>'+
   '<section class="seccion final"><div class="wrap"><span class="serif chico">hoy, para los dos</span><div class="monto">$ '+fmt(e)+sup+'</div><p class="nota">Precio publicado en Mercado Libre</p><a class="cta grande" href="'+p.link+'" target="_blank" rel="noopener sponsored">Comprar en Mercado Libre '+SVG_FLECHA+'</a>'+
-  '<div class="datos"><div><b>'+p.vend.replace(' vendidos','')+'</b><span>vendidos</span></div><div><b>'+p.estr+' de 5</b><span>'+p.op+'</span></div></div></div></section>'+
+  '<div class="datos"><div><b>'+p.vend.replace(' vendidos','').replace(' vendido','')+'</b><span>'+(/^\d|^\+/.test(p.vend)?'vendidos':'en Mercado Libre')+'</span></div>'+(p.estr?'<div><b>'+p.estr+' de 5</b><span>'+p.op+'</span></div>':'')+'</div></div></section>'+
   '<section class="seccion"><div class="wrap"><div class="titulo"><h2 class="serif">Antes de <em>decidir</em></h2></div><div class="faq">'+faq+'</div></div></section>'+
   '<div class="volver"><a class="cta" href="#/'+k+'">Ver todos: '+CATS[k].nombre.toLowerCase()+'</a></div>';
   var foto=document.getElementById('gfoto'),mini=document.getElementById('gmini');
