@@ -772,8 +772,9 @@ function pintarInicio(){
   document.getElementById('cinta').innerHTML=ks.map(function(k){return '<a href="#/'+k+'"><span class="cfoto"><img src="'+CATS[k].foto+'" alt="" loading="lazy"></span>'+CATS[k].nombre+'</a>'}).join('');
   var baratos=todos.filter(function(x){return precioDe(x.p)<=15000}),minA=minPrecio(todos.filter(function(x){return x.k==='anillos'}));
   var sl=[['s1','Anillos de promesa','Sets de a dos desde $ '+fmt(minA)+'. Uno para cada uno.','Ver anillos','#/anillos','img/hero.jpg'],
-    ['s2','Regalos hasta $15.000','Llaveros, collares, anillos y más: '+baratos.length+' ideas para sorprender sin gastar de más.','Ver ideas','#/?pres=a','img/llavero-corazon-2.jpg'],
-    ['s3','Cajas para sorprender','Un juego de pistas o una lata con una sorpresa por cada sentido.','Ver cajas','#/cajas','img/caja-tesoro-1.jpg']];
+    ['s2','Regalos hasta $15.000','Llaveros, collares, anillos y más: '+baratos.length+' ideas para sorprender sin gastar de más.','Ver ideas','#/?pres=a','img/llavero-corazon-2.jpg']];
+  ks.forEach(function(k){if(k==='anillos')return;var c=CATS[k];sl.push(['s'+(sl.length%3+1),c.titulo.replace(/<[^>]+>/g,''),c.sub,'Ver '+c.nombre.toLowerCase(),'#/'+k,c.foto])});
+  sl.forEach(function(x,i){x[0]='s'+(i%3+1)});
   document.getElementById('slides').innerHTML=sl.map(function(x,i){return '<a class="slide '+x[0]+(i?'':' on')+'" href="'+x[4]+'" data-pres="'+(x[4].indexOf('pres=a')>-1?'a':'')+'"><div class="tx"><h2>'+x[1]+'</h2><p>'+x[2]+'</p><span class="bt">'+x[3]+'</span></div><div class="im"><img src="'+x[5]+'" alt=""></div></a>'}).join('');
   document.getElementById('dots').innerHTML=sl.map(function(x,i){return '<i data-i="'+i+'" class="'+(i?'':'on')+'"></i>'}).join('');
   document.getElementById('confianza').innerHTML=
