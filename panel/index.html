@@ -41,6 +41,10 @@ h2{font:500 21px 'Playfair Display',serif;margin:30px 4px 4px}
 .rows .r{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--linea)}.rows .r:last-child{border:0}.rows b{font-weight:600}
 .pill{display:inline-block;background:var(--rubor);color:var(--hondo);border-radius:999px;padding:2px 10px;font-size:11.5px;font-weight:600;margin-bottom:6px}
 footer{margin:26px 4px 0;color:var(--suave);font-size:12px}
+
+.btn{display:block;width:100%;margin-top:22px;padding:15px;border:0;border-radius:14px;background:linear-gradient(135deg,var(--hondo),var(--flor));color:#fff;font:600 16px 'DM Sans',sans-serif}
+.btn:active{opacity:.85}
+.pr{margin-top:10px;padding:12px;background:var(--rubor);border-radius:12px;font-size:13px;color:var(--tinta);white-space:pre-wrap;display:none}
 </style></head><body>
 <div class="top"><h1>Nuestro detalle</h1><p>Panel de resultados · cifras al <b id="f"></b></p></div>
 <main>
@@ -59,6 +63,8 @@ footer{margin:26px 4px 0;color:var(--suave);font-size:12px}
 <div class="card rows"><span class="pill">Clarity</span><div id="c"></div></div>
 </div>
 
+<button class="btn" id="b" type="button">Pedir actualización a Claude</button>
+<div class="pr" id="p"></div>
 <footer>Los números los carga Claude desde Vercel, Clarity, Meta y Mercado Libre. Para actualizar, pedile "actualizá el panel de Nuestro detalle".</footer>
 </main>
 <script>
@@ -79,4 +85,9 @@ D.ads.forEach(function(r){
 var W={};D.web.forEach(function(w){W[w[1]]=w;document.getElementById(w[0][0]==='V'?'v':'c').append((function(){var r=el('div','r');r.append(el('span',null,w[1]),el('b',null,w[2]+w[3]));return r})())});
 var R=document.getElementById('r');ring(R,+W['Rebote'][2],'Rebote (Vercel)');ring(R,+W['Profundidad de scroll'][2],'Scroll (Clarity)');
 });
+
+var PROMPT='Actualizá el panel de Nuestro detalle (nuestro-detalle.vercel.app/panel y el panel en Claude): entrá con el Chrome de mi PC de casa a Vercel Analytics, Microsoft Clarity, Meta Ads (campaña Nuestro detalle, gasto, alcance y visitas por anuncio) y al panel de afiliados de Mercado Libre, cargá los números nuevos y publicá. Avisame qué cambió.';
+document.getElementById('b').onclick=function(){var p=document.getElementById('p'),b=this;p.textContent=PROMPT;p.style.display='block';
+function ok(){b.textContent='Copiado: pegalo en el chat con Claude'}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(PROMPT).then(ok,function(){b.textContent='Copialo de acá abajo'})}else{b.textContent='Copialo de acá abajo'}};
 </script></body></html>
