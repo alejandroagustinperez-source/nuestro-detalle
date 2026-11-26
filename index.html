@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nuestro detalle · Regalos para la pareja</title>
-<meta name="description" content="Regalos para parejas enamoradas: anillos, pulseras, collares, tazas, llaveros, relojes, peluches y más. Elegí, mirá el detalle y comprá en Mercado Libre.">
+<meta name="description" content="Regalos para parejas enamoradas: anillos, pulseras, collares, tazas, llaveros, relojes, peluches, fotolibros y más. Elegí, mirá el detalle y comprá en Mercado Libre.">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
@@ -467,6 +467,7 @@ footer{margin-top:50px;border-top:1px solid var(--linea);padding:34px 4vw 40px}
   <a href="#/portarretratos" data-r="portarretratos">Portarretratos <small data-n="portarretratos"></small></a>
   <a href="#/cajas" data-r="cajas">Cajas de regalo <small data-n="cajas"></small></a>
   <a href="#/peluches" data-r="peluches">Peluches <small data-n="peluches"></small></a>
+  <a href="#/fotolibros" data-r="fotolibros">Fotolibros <small data-n="fotolibros"></small></a>
 </nav>
 
 <main>
@@ -716,10 +717,15 @@ var CATS={
   {id:'lata-5-sentidos',nombre:'Lata "Te amo con los 5 sentidos"',tag:'Un regalo para cada sentido',txt:'Una lata con compartimentos rotulados: vista, gusto, olfato, tacto y oído, para armar una sorpresa por sentido.',fotos:['img/caja-lata-1.jpg'],estr:'4,5',op:'2 opiniones',vend:'+5 vendidos',precio:39425,link:'https://meli.la/1uMB2Sp',recibis:[['La lata','Con tapa ilustrada "Te amo con los 5 sentidos"'],['Compartimentos','Uno por sentido: vista, gusto, olfato, tacto y oído']],nota:'Lo que trae cada compartimento lo ves en la publicación de Mercado Libre.'}
  ]}
  ,peluches:{nombre:'Peluches',titulo:'Peluches <em>para abrazar</em>',sub:'Un osito con corazón para regalar: tiernos, suaves y en varios colores.',unidad:'peluches',foto:'img/peluche-ositos-1.jpg',items:[
-  {id:'oso17',nombre:'Oso con corazón "Te amo", 17 cm',tag:'Peluche con corazón bordado',txt:'Un osito de 17 cm que sostiene un corazón con la frase "Te amo". Se consigue en 4 colores.',fotos:['img/peluche-oso17-1.jpg','img/peluche-oso17-2.jpg','img/peluche-oso17-3.jpg'],estr:null,vend:'+50 vendidos',precio:16000,link:'https://meli.la/23wX6DA',recibis:[['El peluche','Un oso con un corazón "Te amo"'],['Tamaño','17 cm'],['Colores','4 para elegir']]},
-  {id:'oso29',nombre:'Oso beige con corazón, 29 cm',tag:'Peluche mediano, súper suave',txt:'Un oso mediano de felpa suave que abraza un corazón. Viene en 9 colores.',fotos:['img/peluche-beige-1.jpg','img/peluche-beige-3.jpg'],estr:'5,0',vend:'+25 vendidos',precio:18999,link:'https://meli.la/1AgBKaX',recibis:[['El peluche','Un oso con un corazón entre los brazos'],['Tamaño','Mediano, 29 cm'],['Material','Felpa con relleno de vellón siliconado'],['Colores','9 para elegir']]},
-  {id:'oso18',nombre:'Oso premium con corazón, 18 cm',tag:'Peluche hipoalergénico, a elegir el color',txt:'Un osito de peluche de 18 cm con un corazón "Te amo". Tiene 12 colores a elegir.',fotos:['img/peluche-premium-1.jpg','img/peluche-premium-2.jpg','img/peluche-premium-3.jpg'],estr:'4,5',vend:'+100 vendidos',precio:14999,link:'https://meli.la/1rLTjsH',recibis:[['El peluche','Un oso con un corazón "Te amo"'],['Tamaño','18 cm'],['Material','Peluche con relleno de fibra de silicona, hipoalergénico'],['Colores','12 para elegir']]},
-  {id:'ositos-pack',nombre:'Pack de 2 ositos blancos, "I Love You"',tag:'Dos ositos, uno para cada uno',txt:'Dos ositos blancos con corazón rojo y la frase "I Love You": uno para cada uno.',fotos:['img/peluche-ositos-1.jpg','img/peluche-ositos-2.jpg','img/peluche-ositos-3.jpg'],estr:'4,3',vend:'+50 vendidos',precio:9199,link:'https://meli.la/2mctMfe',recibis:[['El pack','Dos ositos, uno para cada uno'],['Tamaño','Pequeño'],['Diseño','Blancos, con corazón rojo "I Love You"'],['Material','Tela suave con relleno de felpa']]}
+  {id:'oso17',etq:'Peluche',nombre:'Oso con corazón "Te amo", 17 cm',tag:'Peluche con corazón bordado',txt:'Un osito de 17 cm que sostiene un corazón con la frase "Te amo". Se consigue en 4 colores.',fotos:['img/peluche-oso17-1.jpg','img/peluche-oso17-2.jpg','img/peluche-oso17-3.jpg'],estr:null,vend:'+50 vendidos',precio:16000,link:'https://meli.la/23wX6DA',recibis:[['El peluche','Un oso con un corazón "Te amo"'],['Tamaño','17 cm'],['Colores','4 para elegir']]},
+  {id:'oso29',etq:'Peluche',nombre:'Oso beige con corazón, 29 cm',tag:'Peluche mediano, súper suave',txt:'Un oso mediano de felpa suave que abraza un corazón. Viene en 9 colores.',fotos:['img/peluche-beige-1.jpg','img/peluche-beige-3.jpg'],estr:'5,0',vend:'+25 vendidos',precio:18999,link:'https://meli.la/1AgBKaX',recibis:[['El peluche','Un oso con un corazón entre los brazos'],['Tamaño','Mediano, 29 cm'],['Material','Felpa con relleno de vellón siliconado'],['Colores','9 para elegir']]},
+  {id:'oso18',etq:'Peluche',nombre:'Oso premium con corazón, 18 cm',tag:'Peluche hipoalergénico, a elegir el color',txt:'Un osito de peluche de 18 cm con un corazón "Te amo". Tiene 12 colores a elegir.',fotos:['img/peluche-premium-1.jpg','img/peluche-premium-2.jpg','img/peluche-premium-3.jpg'],estr:'4,5',vend:'+100 vendidos',precio:14999,link:'https://meli.la/1rLTjsH',recibis:[['El peluche','Un oso con un corazón "Te amo"'],['Tamaño','18 cm'],['Material','Peluche con relleno de fibra de silicona, hipoalergénico'],['Colores','12 para elegir']]},
+  {id:'ositos-pack',etq:'Pack de 2 ositos',nombre:'Pack de 2 ositos blancos, "I Love You"',tag:'Dos ositos, uno para cada uno',txt:'Dos ositos blancos con corazón rojo y la frase "I Love You": uno para cada uno.',fotos:['img/peluche-ositos-1.jpg','img/peluche-ositos-2.jpg','img/peluche-ositos-3.jpg'],estr:'4,3',vend:'+50 vendidos',precio:9199,link:'https://meli.la/2mctMfe',recibis:[['El pack','Dos ositos, uno para cada uno'],['Tamaño','Pequeño'],['Diseño','Blancos, con corazón rojo "I Love You"'],['Material','Tela suave con relleno de felpa']]}
+ ]}
+ ,fotolibros:{nombre:'Fotolibros',titulo:'Fotolibros <em>con su historia</em>',sub:'Las fotos de los dos, impresas en un libro de tapa dura. Se hacen a pedido.',unidad:'fotolibros',foto:'img/fotolibro-viajes-1.jpg',items:[
+  {id:'foto-viajes',etq:'Fotolibro',nombre:'Fotolibro tapa dura, viajes y familia',tag:'21 × 14 cm, hasta 50 fotos',txt:'Un libro de fotos personalizado de tapa dura, compacto, para guardar los recuerdos de los dos.',fotos:['img/fotolibro-viajes-1.jpg','img/fotolibro-viajes-3.jpg'],estr:'4,7',op:'28 opiniones',vend:'+50 vendidos',precio:62748,link:'https://meli.la/1MLrVyU',recibis:[['El fotolibro','Un libro de fotos personalizado, de tapa dura'],['Tamaño','21 × 14 cm'],['Fotos','Hasta 50'],['Material','Papel impreso ilustración'],['Preparación','Unos 15 días hasta tenerlo listo']],nota:'Se hace a pedido: cómo enviar tus fotos y los plazos los ves en la publicación de Mercado Libre.'},
+  {id:'foto-paises',etq:'Fotolibro',nombre:'Fotolibro de viajes, 27,9 × 21,6 cm',tag:'Hasta 100 fotos, tapa dura',txt:'Un fotolibro grande, con la tapa que vos elegís, para contar un viaje o toda una historia de a dos.',fotos:['img/fotolibro-paises-1.jpg','img/fotolibro-paises-2.jpg','img/fotolibro-paises-3.jpg'],estr:'5,0',op:'21 opiniones',vend:'+50 vendidos',precio:90774,link:'https://meli.la/2bEK8ZU',recibis:[['El fotolibro','Un libro de fotos personalizado'],['Tamaño','27,9 × 21,6 cm'],['Fotos','Hasta 100'],['Preparación','Unos 20 días hasta tenerlo listo']],nota:'Se hace a pedido: cómo enviar tus fotos y los plazos los ves en la publicación de Mercado Libre.'},
+  {id:'foto-20x25',etq:'Fotolibro',nombre:'Fotolibro 20 × 25 cm, viajes y cumpleaños',tag:'Hasta 100 fotos, papel ilustración 150 g',txt:'Un fotolibro de formato vertical, con hasta 100 fotos, para viajes, cumpleaños y aniversarios.',fotos:['img/fotolibro-20x25-1.jpg','img/fotolibro-20x25-2.jpg','img/fotolibro-20x25-3.jpg'],estr:'4,3',op:'7 opiniones',vend:'+25 vendidos',precio:110500,link:'https://meli.la/1pHTNRG',recibis:[['El fotolibro','Un libro de fotos personalizado'],['Tamaño','25 × 20 cm'],['Fotos','Hasta 100'],['Material','Papel ilustración de 150 g'],['Preparación','Unos 25 días hasta tenerlo listo']],nota:'Se hace a pedido: cómo enviar tus fotos y los plazos los ves en la publicación de Mercado Libre.'}
  ]}
 };
 var PRECIOS=null,FLOR_PRECIO=14416.55;
@@ -831,7 +837,7 @@ function pintarDetalle(k,p){
       '<h1 class="serif">'+esc(p.nombre)+'</h1>'+
       '<div class="pd-est">'+(p.estr?'<b>'+p.estr+'</b><span class="st" aria-hidden="true">'+est+'</span><span>'+p.op+'</span>':'')+'</div>'+
       '<div class="pd-precio">$ '+fmt(e)+sup+'</div>'+
-      '<p class="pd-sub">Set de dos · '+fecha+'</p>'+
+      '<p class="pd-sub">'+(p.etq||'Set de dos')+' · '+fecha+'</p>'+
       '<a class="cta grande" href="'+p.link+'" target="_blank" rel="noopener sponsored">Comprar en Mercado Libre</a>'+
       '<ul class="pd-gar"><li>'+IC+'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Compra protegida: pagás y recibís dentro de Mercado Libre</li><li>'+IC+'<rect x="2.5" y="6" width="19" height="13" rx="2"/><path d="M2.5 10.5h19"/></svg>Todos los medios de pago</li><li>'+IC+'<path d="M3 7h18v13H3zM3 7l3-4h12l3 4M12 7v13"/></svg>Un regalo para los dos</li></ul>'+
     '</div>'+
@@ -854,7 +860,7 @@ function barra(item){
   barraItem=item;var b=document.getElementById('barra');
   if(!item){b.classList.remove('on');b.style.display='none';return}
   b.style.display='';
-  var pr=precioDe(item);document.getElementById('precioBarra').innerHTML='$ '+fmt(Math.floor(pr))+'<small>'+(item.id==='flor'?'Set de dos anillos':'Set de dos')+'</small>';
+  var pr=precioDe(item);document.getElementById('precioBarra').innerHTML='$ '+fmt(Math.floor(pr))+'<small>'+(item.etq||(item.id==='flor'?'Set de dos anillos':'Set de dos'))+'</small>';
   var a=b.querySelector('a');a.href=item.link;a.target='_blank';a.rel='noopener sponsored';
   b.classList.toggle('on',scrollY>innerHeight*.5);
 }
