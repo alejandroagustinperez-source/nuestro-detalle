@@ -78,6 +78,7 @@ a{color:inherit}
 .precio-h .v sup{font-size:.3em;vertical-align:top;position:relative;top:.2em;margin-left:.06em;letter-spacing:0}
 .precio-h .n{font-size:14px;color:var(--suave);margin-top:8px}
 .acc{display:flex;flex-direction:column;gap:12px;max-width:440px;animation:sube 1s 1.15s both}
+.aviso{display:block;color:var(--suave);font-size:14px;line-height:1.4;margin:10px 0 0;text-align:center}
 .acc small{color:var(--suave);font-size:14px}
 .garantias{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:14px;color:var(--suave);animation:sube 1s 1.3s both}
 .garantias span{display:inline-flex;align-items:center;gap:7px}
@@ -526,6 +527,7 @@ footer{margin-top:50px;border-top:1px solid var(--linea);padding:34px 4vw 40px}
         <a class="cta grande" href="#" data-ml>Comprar en Mercado Libre
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
         <small>Pagás y recibís dentro de Mercado Libre</small>
+        <small class="aviso">Se abre Mercado Libre: tocá «Ir a producto» para ver y comprar.</small>
       </div>
       <div class="garantias">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Compra protegida</span>
@@ -611,6 +613,7 @@ footer{margin-top:50px;border-top:1px solid var(--linea);padding:34px 4vw 40px}
     <p class="nota" id="fecha">Precio publicado en Mercado Libre</p>
     <a class="cta grande" href="#" data-ml>Comprar en Mercado Libre
       <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+    <p class="aviso">Se abre Mercado Libre: tocá «Ir a producto» para ver y comprar.</p>
     <div class="datos">
       <div><b>+1000</b><span>vendidos</span></div>
       <div><b>4,6 de 5</b><span>209 opiniones</span></div>
@@ -839,6 +842,7 @@ function pintarDetalle(k,p){
       '<div class="pd-precio">$ '+fmt(e)+sup+'</div>'+
       '<p class="pd-sub">'+(p.etq||'Set de dos')+' · '+fecha+'</p>'+
       '<a class="cta grande" href="'+p.link+'" target="_blank" rel="noopener sponsored">Comprar en Mercado Libre</a>'+
+      '<p class="aviso">Se abre Mercado Libre: tocá «Ir a producto» para ver y comprar.</p>'+
       '<ul class="pd-gar"><li>'+IC+'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Compra protegida: pagás y recibís dentro de Mercado Libre</li><li>'+IC+'<rect x="2.5" y="6" width="19" height="13" rx="2"/><path d="M2.5 10.5h19"/></svg>Todos los medios de pago</li><li>'+IC+'<path d="M3 7h18v13H3zM3 7l3-4h12l3 4M12 7v13"/></svg>Un regalo para los dos</li></ul>'+
     '</div>'+
   '</div>'+
