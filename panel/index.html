@@ -50,7 +50,7 @@ footer{margin:26px 4px 0;color:var(--suave);font-size:12px}
 <main>
 <div class="kpis" id="k"></div>
 
-<h2>Anuncios</h2><p class="hint">Del 1 al 27/11, en pesos.</p>
+<h2>Anuncios</h2><p class="hint">Del 1 al 28/11, en pesos.</p>
 <div class="grid2">
 <div class="card bars"><span class="pill">Dónde se gastó</span><div id="g"></div></div>
 <div class="card bars"><span class="pill">Alcance y visitas</span><div id="a"></div></div>
@@ -77,7 +77,7 @@ var d=el('div','ring');d.append(s,el('div','l',label));p.append(d)}
 fetch('data.json?v='+Date.now()).then(function(r){return r.json()}).then(function(D){
 document.getElementById('f').textContent=D.fecha.split('-').reverse().join('/');
 var gasto=D.ads.reduce(function(s,r){return s+r[1]},0);
-[['Visitantes',D.web[0][2],'Vercel · 7 días'],['Gastado en anuncios','$ '+N(gasto),'Meta · 1–27 nov'],['Clics de afiliado',N(D.ml.clics),'ML · 1–27 nov'],['Ventas',N(D.ml.ventas),'ML · 1–27 nov']].forEach(function(k){var d=el('div','card kpi');d.append(el('div','l',k[0]),el('div','v',k[1]),el('div','s',k[2]));document.getElementById('k').append(d)});
+[['Visitantes',D.web[0][2],'Vercel · 7 días'],['Gastado en anuncios','$ '+N(gasto),'Meta · 1–28 nov'],['Clics de afiliado',N(D.ml.clics),'ML · 1–28 nov'],['Ventas',N(D.ml.ventas),'ML · 1–28 nov']].forEach(function(k){var d=el('div','card kpi');d.append(el('div','l',k[0]),el('div','v',k[1]),el('div','s',k[2]));document.getElementById('k').append(d)});
 var mg=Math.max.apply(null,D.ads.map(function(r){return r[1]})),ma=Math.max.apply(null,D.ads.map(function(r){return r[2]}));
 D.ads.forEach(function(r){
  bar(document.getElementById('g'),r[0],r[1]?'$ '+N(r[1],2):'$ 0',r[1]/mg*100,r[4]!=null?'$ '+N(r[4],2)+' por visita':(r[1]?'sin visitas todavía':'sin entrega todavía'));
